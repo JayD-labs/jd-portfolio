@@ -52,7 +52,7 @@ nav a {
 
 nav a:hover {
     color: #f2f2f2;
-    text-decoraton: underline;
+    text-decoration: underline;
 }
 
 main {
@@ -85,11 +85,23 @@ section p {
     list-style: none;
 }
 
+#skills li span:first-child {
+    width: 180px;
+}
+
 #skills li {
+    display: flex;
+    align-items: center;
+
     background-color: #1f1f1f;
     padding: 10px 15px;
     margin-bottom: 10px;
     border-radius: 8px;
+}
+
+#skills progress {
+    margin-left: 15px;
+    margin-right: 8px;
 }
 
 #projects article + article {
