@@ -12,33 +12,6 @@ body {
     line-height: 1.6;
 }
 
-header {
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-
-    text-align: center;
-
-    padding: 40px 20px;
-}
-
-header h1 {
-    font-size: 5rem;
-    color: #0b6406;
-}
-
-header p {
-    max-width: 650px;
-    margin-top: 10px;
-
-    font-size: 1.2rem;
-    color: #cccccc;
-}
-
 nav {
     margin-top: 30px;
 }
@@ -81,18 +54,60 @@ section p {
     color: #cccccc;
 }
 
+/* Header-Bereich */
+header {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 
+    text-align: center;
 
-/* Skills-Bereich */ 
-#skills ul {
-    list-style: none;
+    padding: 40px 20px;
 }
 
-/* Einzelne SKill-Karten */
-#skills li {
+header h1 {
+    font-size: 5rem;
+    color: #0b6406;
+}
+
+header p {
+    max-width: 650px;
+    margin-top: 10px;
+
+    font-size: 1.2rem;
+    color: #cccccc;
+}
+
+header article {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+
+    border-left: 4px solid #0b6406;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header h3 {
+    margin-bottom: 10px;
+    color: #f2f2f2;
+    font-size: 1.3rem;
+}
+
+
+/* Links-Bereich */
+#links ul {
+    list-style: none;
+
     display: flex;
     align-items: center;
+    flex-direction: row;
+    gap: 10px;
 
     background-color: #1f1f1f;
     padding: 10px 15px;
@@ -100,44 +115,102 @@ section p {
     border-radius: 8px;
 }
 
-/* Feste Breite für Skill-Namen */
-#skills li span:first-child {
-    width: 180px;
+#links a {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 10px 16px;
+
+    background-color: #0b6406;
+    color: #f2f2f2;
+
+    text-decoration: none;
+    border-radius: 8px;
+
+    transition: 
+        transform 0.2s ease, 
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
 }
 
-/* Fortschrittsbalken */
-#skills progress {
-    margin-left: 15px;
-    margin-right: 8px;
+#links a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+}
 
-    width: 40%;
-    height: 15px;
+#links h3 {
+    margin-bottom: 10px;
+    color: #f2f2f2;
+    font-size: 1.3rem;
+}
 
-    appearance: none;
-    -webkit-appearance: none;
 
-    border: none;
+
+#skills ul {
+    list-style: none;
+}
+
+/* Skill-Karte */
+#skills li {
+    background-color: #1f1f1f;
+
+    margin-bottom: 10px;
+    padding: 15px 20px;
+
     border-radius: 8px;
+    border-left: 4px solid #0b6406;
+
+    cursor: pointer;
+}
+
+/* Skillname + Status */
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-header span {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.skill-header small {
+    background-color: #2b2b2b;
+
+    padding: 5px 10px;
+    border-radius: 6px;
+
+    color: #cccccc;
+}
+
+/* Beschreibung eingeklappt */
+#skills li p {
+    max-height: 0;
+    opacity: 0;
+
     overflow: hidden;
+
+    margin: 0;
+
+    transform: translateY(-5px);
+
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        margin 0.4s ease,
+        transform 0.4s ease;
 }
 
-/* Browser-Standarddesign des Progress-Balkens entfernen */
-#skills progress::-webkit-progress-bar {
-    background-color: #2a2a2a;
-    border-radius: 8px;
+/* Beschreibung beim Hover ausklappen */
+#skills li:hover p {
+    max-height: 150px;
+    opacity: 1;
+
+    margin-top: 15px;
+
+    transform: translateY(0);
 }
-
-#skills progress::-webkit-progress-value {
-    background-color: #0b6406;
-    border-radius: 8px;
-}
-
-#skills progress::-moz-progress-bar {
-    background-color: #0b6406;
-    border-radius: 8px;
-}
-
-
 /* Projekte-Bereich */
 #projects article {
     background-color: #1f1f1f;
