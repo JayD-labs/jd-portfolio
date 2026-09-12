@@ -6,7 +6,7 @@ Das Projekt dient dazu, meine Kenntnisse in **HTML, CSS, Git und GitHub** prakti
 
 [![GitHub](https://img.shields.io/badge/GitHub-JayD--labs-24292f?logo=github&logoColor=white)](https://github.com/JayD-labs?tab=repositories)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Justin--Daniel%20Schuldt-444444?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/justin-daniel-schuldt-23577b3b0/)
-[![Microsoft Learn](https://img.shields.io/badge/Microsoft%20Learn-Zertifikate-5b5b5b?logo=microsoft&logoColor=white)](https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/)
+[![Microsoft Learn](https://img.shields.io/badge/Microsoft%20Learn-Zertifikate-5b5b5b?logo=microsoft&logoColor=white)](https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements)
 
 ## Aktueller Stand
 
@@ -73,13 +73,13 @@ Aktuell auf dem Portfolio eingebunden:
 
 Grundlagen des KI-gestützten Promptings mit Fokus auf klare und zielgerichtete Eingaben, grundlegende Prompting-Techniken und den praktischen Einsatz von KI-Tools.
 
-[Badge ansehen](https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements/print/zjuwqfm2)
+[Badge auf Microsoft Learn ansehen](https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements?tab=tab-modules#badges-section)
 
 ### Website erstellen mit HTML & CSS (Anfänger)
 
 Grundlagen der Webentwicklung mit HTML und CSS. Behandelt wurden unter anderem der strukturierte Aufbau von Webseiten, grundlegendes Styling, Barrierefreiheit und saubere Webentwicklung.
 
-[Badge ansehen](https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements/print/h2sv3yn8?tab=tab-learning-paths)
+[Nachweis auf Microsoft Learn ansehen](https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements?tab=tab-learning-paths#trophies-section)
 
 Weitere Nachweise werden im Laufe meines Selbststudiums ergänzt.
 
