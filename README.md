@@ -1,8 +1,12 @@
 # JD Portfolio
 
-Meine persönliche Portfolio-Website, die ich Schritt für Schritt selbst entwickle.
+Meine persönliche Portfolio-Website, die ich im Rahmen meines IT-Selbststudiums entwickle und kontinuierlich erweitere.
 
-Das Projekt dient dazu, meine Kenntnisse in **HTML, CSS, Git und GitHub** praktisch auszubauen und meinen Lernfortschritt sowie eigene Projekte übersichtlich darzustellen.
+Das Projekt dient dazu, meine Kenntnisse in **HTML, CSS, Git und GitHub** praktisch anzuwenden, meinen aktuellen Lernstand zu dokumentieren und eigene Projekte sowie Zertifikate übersichtlich darzustellen.
+
+[![GitHub](https://img.shields.io/badge/GitHub-JayD--labs-24292f?logo=github&logoColor=white)](https://github.com/JayD-labs?tab=repositories)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Justin--Daniel%20Schuldt-444444?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/justin-daniel-schuldt-23577b3b0/)
+[![Microsoft Learn](https://img.shields.io/badge/Microsoft%20Learn-Zertifikate-5b5b5b?logo=microsoft&logoColor=white)](https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/)
 
 ## Aktueller Stand
 
@@ -10,68 +14,78 @@ Die Website befindet sich aktuell in aktiver Entwicklung.
 
 Bereits umgesetzt:
 
-* Grundlegende HTML-Struktur
-* Dunkles responsives Grunddesign
-* Navigation
-* Skills & Technologien
-* Fortschrittsanzeigen für Skills
-* Projektübersicht
-* Zertifikate & Badges
-* Hover-Effekte und kleinere Animationen
+- Grundlegende semantische HTML-Struktur
+- Dunkles responsives Grunddesign
+- Navigation innerhalb der Website
+- Bereich „Über mich“
+- Skills & Technologien mit kurzen Beschreibungen und aktuellem Status
+- Links zu GitHub, LinkedIn und Microsoft Learn
+- Projektübersicht
+- Zertifikate & Badges
+- Hover-Effekte und kleinere Animationen
 
 ## Technologien
 
 Aktuell verwende ich:
 
-* HTML5
-* CSS3
-* Git
-* GitHub
+- HTML5
+- CSS3
+- Git
+- GitHub
 
-Weitere Technologien können im Laufe der Entwicklung hinzukommen.
+Parallel beschäftige ich mich unter anderem mit **Python, Linux, PostgreSQL / Supabase, KI-gestützter Entwicklung und Systemarchitektur**.
 
 ## Lernziele
 
 Mit diesem Projekt möchte ich insbesondere lernen:
 
-* Webseiten semantisch mit HTML aufzubauen
-* Layouts und Designs mit CSS umzusetzen
-* Responsive Design für verschiedene Bildschirmgrößen zu entwickeln
-* Git sinnvoll im Entwicklungsprozess einzusetzen
-* Mit Feature-Branches und nachvollziehbaren Commits zu arbeiten
-* Eigene Projekte strukturiert zu dokumentieren
+- Webseiten semantisch mit HTML aufzubauen
+- Layouts und Designs mit CSS umzusetzen
+- Responsive Design für verschiedene Bildschirmgrößen zu entwickeln
+- Git sinnvoll im Entwicklungsprozess einzusetzen
+- Mit Feature-Branches und nachvollziehbaren Commits zu arbeiten
+- Eigene Projekte strukturiert zu dokumentieren
+- Bestehenden Code zu verstehen und gezielt weiterzuentwickeln
 
 ## Projekte
 
 ### JD Portfolio
 
-Diese Website ist mein erstes selbst entwickeltes Portfolio-Projekt.
-
-Der Fokus liegt nicht nur auf dem fertigen Ergebnis, sondern besonders darauf, HTML, CSS und Git während der Entwicklung praktisch zu verstehen und anzuwenden.
+Meine erste selbst entwickelte Portfolio-Website. Das Projekt dient dazu, meine Kenntnisse in HTML, CSS, Git und GitHub praktisch auszubauen und meinen Lernfortschritt sichtbar zu dokumentieren.
 
 ### Axiom Core
 
-Ein persönliches KI- und Automatisierungsprojekt, mit dem ich mich unter anderem mit folgenden Themen beschäftige:
+Ein persönliches KI- und Automatisierungsprojekt zur Entwicklung eines modularen Assistenzsystems.
 
-* APIs
-* Datenbanken
-* Automatisierung
-* Systemarchitektur
-* KI-gestützte Anwendungen
+Der Fokus liegt unter anderem auf:
+
+- Systemarchitektur
+- APIs
+- Datenbanken
+- Automatisierung
+- KI-gestützten Anwendungen
 
 ## Zertifikate & Badges
 
-Auf der Website zeige ich ausgewählte Zertifikate und Badges aus meinem Lernfortschritt.
+Aktuell auf dem Portfolio eingebunden:
 
-Aktuell enthalten:
+### Microsoft Applied Skills / AI Prompting
 
-* Microsoft Learn – KI / Prompting
+Grundlagen des KI-gestützten Promptings mit Fokus auf klare und zielgerichtete Eingaben, grundlegende Prompting-Techniken und den praktischen Einsatz von KI-Tools.
 
-Weitere Nachweise werden im Laufe meiner Weiterbildung ergänzt.
+[Badge ansehen](https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements/print/zjuwqfm2)
+
+### Website erstellen mit HTML & CSS (Anfänger)
+
+Grundlagen der Webentwicklung mit HTML und CSS. Behandelt wurden unter anderem der strukturierte Aufbau von Webseiten, grundlegendes Styling, Barrierefreiheit und saubere Webentwicklung.
+
+[Badge ansehen](https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements/print/h2sv3yn8?tab=tab-learning-paths)
+
+Weitere Nachweise werden im Laufe meines Selbststudiums ergänzt.
 
 ## Entwicklungsworkflow
 
-Neue Änderungen werden grundsätzlich in Feature-Branches entwickelt.
+Größere Änderungen entwickle ich grundsätzlich in Feature-Branches.
 
 Beispiel:
 
@@ -79,10 +93,10 @@ Beispiel:
 feature/styling
 ```
 
-Nach abgeschlossenen Entwicklungsschritten werden Änderungen mit Git dokumentiert und anschließend in den Hauptbranch übernommen.
+Abgeschlossene Änderungen werden mit nachvollziehbaren Git-Commits dokumentiert und anschließend in den Hauptbranch übernommen.
 
 ## Status
 
 🚧 **In Entwicklung**
 
-Die Website wird kontinuierlich erweitert und verbessert.
+Das Portfolio wird kontinuierlich erweitert und an meinen tatsächlichen Lernstand angepasst.
