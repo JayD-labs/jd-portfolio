@@ -25,7 +25,7 @@ nav a {
 
 nav a:hover {
     color: #f2f2f2;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 main {
@@ -145,22 +145,9 @@ header h3 {
 }
 
 
-
+/* Skill-Karte */
 #skills ul {
     list-style: none;
-}
-
-/* Skill-Karte */
-#skills li {
-    background-color: #1f1f1f;
-
-    margin-bottom: 10px;
-    padding: 15px 20px;
-
-    border-radius: 8px;
-    border-left: 4px solid #0b6406;
-
-    cursor: pointer;
 }
 
 /* Skillname + Status */
@@ -168,6 +155,18 @@ header h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    width: 100%;
+
+    padding: 0;
+    border: 0;
+
+    background: transparent;
+    color: inherit;
+    font: inherit;
+
+    text-align: left;
+    cursor: pointer;
 }
 
 .skill-header span {
@@ -184,8 +183,19 @@ header h3 {
     color: #cccccc;
 }
 
+#skills li {
+    background-color: #1f1f1f;
+
+    margin-bottom: 10px;
+    padding: 15px 20px;
+
+    border-radius: 8px;
+    border-left: 4px solid #0b6406;
+}
+
+
 /* Beschreibung eingeklappt */
-#skills li p {
+#skills li p{
     max-height: 0;
     opacity: 0;
 
@@ -203,7 +213,8 @@ header h3 {
 }
 
 /* Beschreibung beim Hover ausklappen */
-#skills li:hover p {
+#skills li:hover p,
+#skills li:focus-within p {
     max-height: 150px;
     opacity: 1;
 
@@ -211,6 +222,7 @@ header h3 {
 
     transform: translateY(0);
 }
+
 /* Projekte-Bereich */
 #projects article {
     background-color: #1f1f1f;
@@ -238,7 +250,6 @@ header h3 {
 }
 
 /* Zertifikate-Bereich */
-
 #certificates article {
     background-color: #1f1f1f;
     padding: 20px;
