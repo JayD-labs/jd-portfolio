@@ -148,8 +148,7 @@ jd-portfolio/
 ├── jd-design-tokens.css
 ├── style.css
 ├── script.js
-├── README.md
-└── CNAME
+└── README.md
 ```
 
 ### Dateien
@@ -159,7 +158,6 @@ jd-portfolio/
 - `style.css` – komponentenspezifisches Layout und Styling
 - `script.js` – Interaktion der aufklappbaren Skill-Karten
 - `README.md` – Dokumentation des Projekts
-- `CNAME` – Konfiguration der eigenen Domain für GitHub Pages
 
 ## Entwicklungsworkflow
 
