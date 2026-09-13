@@ -28,7 +28,8 @@ body {
    NAVIGATION
    ===================================================== */
 .top-nav {
-    max-width: 1000px;
+    width: calc(100% - 40px);
+    max-width: 900px;
     margin: 0 auto;
 
     display: flex;
