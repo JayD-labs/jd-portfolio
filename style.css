@@ -434,7 +434,7 @@ section p {
 /* =====================================================
    MOBILE RESPONSIVENESS
    ===================================================== */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .hero {
         flex-direction: column;
         text-align: center;
@@ -455,7 +455,11 @@ section p {
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px;
+        gap: 18px;
+    }
+    
+    .nav-links a {
+        font-size: 0.95rem;
     }
 
     section {
