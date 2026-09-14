@@ -2,5 +2,5 @@
 .env
 .env.*
 !.env.example
-assets/certificates/*.pdf
-assets/*
+assets/certificates
+assets/pics_old
