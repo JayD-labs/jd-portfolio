@@ -429,3 +429,41 @@ section p {
     color: var(--color-text);
     font-size: 1.3rem;
 }
+
+
+/* =====================================================
+   MOBILE RESPONSIVENESS
+   ===================================================== */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .hero-photo {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
+    }
+
+    .top-nav {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    section {
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    main {
+        padding: 24px 16px;
+    }
+}
