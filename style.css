@@ -170,6 +170,14 @@ body::before {
     filter: blur(2px);
 
     opacity: 0.9;
+
+    animation:
+        background-drift
+        42s
+        ease-in-out
+        infinite;
+
+    will-change: transform;
 }
 
 
@@ -446,6 +454,54 @@ code {
     font-weight: 650;
 }
 
+/* =========================
+   Interactive Card Glow
+   ========================= */
+
+.card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+}
+
+
+.card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: -1;
+
+    border-radius: inherit;
+
+    background:
+        radial-gradient(
+            circle 14rem at var(--mouse-x) var(--mouse-y),
+            color-mix(
+                in srgb,
+                var(--color-primary) 12%,
+                transparent
+            ),
+            transparent 70%
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity var(--transition-normal);
+
+    pointer-events: none;
+}
+
+
+.card:hover::before {
+    opacity: 1;
+}
+
 
 /* =========================
    Header
@@ -468,23 +524,16 @@ code {
 /* =========================
    Top Navigation
    ========================= */
-
 .top-nav {
     display: flex;
-
     align-items: center;
 
-    gap:
-        var(--space-3);
+    gap: var(--space-3);
 
-    min-height:
-        3.75rem;
+    min-height: 3.75rem;
+    max-width: var(--content-width);
 
-    max-width:
-        var(--content-width);
-
-    margin:
-        0 auto;
+    margin: 0 auto;
 
     padding:
         var(--space-2)
@@ -515,7 +564,6 @@ code {
         blur(1.5rem)
         saturate(1.2);
 }
-
 
 .brand {
     flex:
@@ -907,6 +955,24 @@ code {
 
 
 .accordion-panel {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    padding-top: 0;
+
+    transition:
+        max-height 420ms ease,
+        opacity 280ms ease,
+        padding-top 420ms ease;
+}
+
+
+.accordion-panel.is-open {
+    opacity: 1;
+
     padding-top:
         var(--space-2);
 }
@@ -1028,34 +1094,53 @@ code {
 .back-to-top {
     position: fixed;
 
-    right:
-        var(--space-4);
+    right: var(--space-4);
+    bottom: var(--space-4);
 
-    bottom:
-        var(--space-4);
+    z-index: 250;
 
-    z-index:
-        250;
+    display: grid;
+    place-items: center;
 
-    width:
-        3rem;
+    width: 3rem;
+    height: 3rem;
 
-    height:
-        3rem;
+    padding: 0;
 
-    padding:
-        0;
-
-    border-radius:
-        999px;
+    border-radius: 999px;
 
     box-shadow:
         var(--glass-shadow);
 
-    font-size:
-        1.3rem;
+    font-size: 1.3rem;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform:
+        translateY(0.75rem)
+        scale(0.94);
+
+    transition:
+        opacity var(--transition-normal),
+        transform var(--transition-normal),
+        visibility 0s linear var(--transition-normal);
 }
 
+
+.back-to-top.is-visible {
+    opacity: 1;
+
+    visibility: visible;
+    pointer-events: auto;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    transition-delay: 0s;
+}
 
 /* =========================
    Tablet
@@ -1350,6 +1435,133 @@ code {
     }
 }
 
+/* =========================
+   Interactivity / Motion
+   ========================= */
+
+
+/* Scroll Reveal */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(1.25rem);
+
+    transition:
+        opacity 600ms ease,
+        transform 600ms ease;
+}
+
+
+.reveal.is-visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* Aktiver Punkt in der Side Navigation */
+
+.side-nav a.is-active {
+    background:
+        color-mix(
+            in srgb,
+            var(--color-primary) 14%,
+            transparent
+        );
+
+    color:
+        var(--color-primary);
+
+    transform:
+        translateX(0.25rem);
+
+    box-shadow:
+        inset 0.18rem 0
+        var(--color-primary);
+}
+
+
+/* Top Navigation reagiert auf Scrollen */
+
+.top-nav {
+    transition:
+        background-color var(--transition-normal),
+        border-color var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+
+.top-nav.is-scrolled {
+    background:
+        color-mix(
+            in srgb,
+            var(--color-surface) 78%,
+            transparent
+        );
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--color-primary) 20%,
+            var(--color-border-subtle)
+        );
+
+    box-shadow:
+        0 0.75rem 2.5rem
+        color-mix(
+            in srgb,
+            var(--color-background) 60%,
+            transparent
+        );
+}
+
+
+/* Profilbild bekommt etwas Tiefe */
+
+.hero-photo img {
+    transition:
+        transform 700ms ease;
+}
+
+
+.hero-photo:hover img {
+    transform:
+        scale(1.035);
+}
+
+
+/* Hintergrund bewegt sich sehr langsam */
+
+body::before {
+    animation:
+        background-drift
+        18s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+@keyframes background-drift {
+
+    0% {
+        transform:
+            translate3d(-0.35rem, -0.2rem, 0);
+    }
+
+    50% {
+        transform:
+            translate3d(0.7rem, 0.4rem, 0);
+    }
+
+    100% {
+        transform:
+            translate3d(-0.35rem, -0.2rem, 0);
+    }
+}
 
 /* =========================
    Reduced Motion
@@ -1379,3 +1591,6 @@ code {
             1 !important;
     }
 }
+
+
+
