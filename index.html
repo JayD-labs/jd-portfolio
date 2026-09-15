@@ -3,255 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>JD - Portfolio</title>
+    <meta name="description" content="JD Portfolio – persönliches IT-Portfolio mit Lernweg, Skills, Zertifikaten, Projekten und Prompts.">
+    <title>JD | Portfolio</title>
 
     <link rel="stylesheet" href="jd-design-tokens.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-
 <body>
+    <a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
 
     <header class="site-header">
+        <nav class="top-nav" aria-label="Hauptnavigation">
+            <a class="brand" href="https://jd-schuldt.de" aria-label="JD – zur Hauptwebsite">JD</a>
 
-        <nav class="top-nav">
-            <a class="nav-brand" href="#">JD</a>
+            <div class="top-nav-links">
+                <a href="https://jd-schuldt.de">Home</a>
+                <a href="https://github.com/JayD-Labs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/justin-daniel-schuldt-23577b3b0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements" target="_blank" rel="noopener noreferrer">Microsoft Learn</a>
+            </div>
 
-            <ul class="nav-links">
-                <li><a href="#about">Über mich</a></li>
-                <li><a href="#skills">Fähigkeiten</a></li>
-                <li><a href="#certificates">Zertifikate</a></li>
-                <li><a href="#projects">Projekte</a></li>
-            </ul>
+            <button class="button button-secondary theme-toggle" type="button" id="theme-toggle" aria-pressed="false">
+                <span class="theme-toggle-label">Light Mode</span>
+            </button>
         </nav>
-
-        <article class="hero">
-
-            <div class="hero-photo">
-                <img 
-                    src="assets/images/jd-profile.jpeg"
-                    alt="Porträt von JD"
-                >
-            </div>
-            
-            <div class="hero-content">
-
-                <p class="hero-kicker">
-                    Hallo, ich bin
-                </p>
-
-                <h1>JD</h1>
-
-                <p class="hero-role">
-                    IT-Einstieg · Webentwicklung · Systeme
-                </p>
-
-                <p class="hero-description">
-                    Ich beschäftige mich mit Webentwicklung, Python,
-                    Systemen und KI-gestützter Entwicklung und baue 
-                    meine Kenntnisse durch eigene Projekte weiter aus.
-                </p>
-
-                <ul class="hero-links">
-                    <li>
-                        <a href="https://github.com/JayD-labs?tab=repositories"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                            GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/justin-daniel-schuldt-23577b3b0/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                            LinkedIn
-                        </a>
-                    </li>
-                     <li>
-                        <a href="https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                            Microsoft Learn
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-
-        </article>
-
     </header>
 
-    <main>
+    <nav class="side-nav" aria-label="Seitennavigation">
+        <a href="#hero">Hero</a>
+        <a href="#about">Über mich</a>
+        <a href="#skills">Skills &amp; Technologien</a>
+        <a href="#certificates">Zertifikate &amp; Nachweise</a>
+        <a href="#projects">Projekte</a>
+        <a href="#prompts">Prompts</a>
+    </nav>
 
-        <section id="about">
-            <h2>Über mich</h2>
-
-            <p>
-                Ich interessiere mich schon länger für IT und beschäftige mich 
-                inzwischen gezielt mit Programmierung, Webentwicklung und Systemen.
-            </p>
-            <p>
-                Aktuell baue ich meine Grundlagen in HTML, CSS sowie Git und GitHub 
-                aus und setze das Gelernte direkt in eigenen Projekten wie diesem 
-                Portfolio um. Parallel beschäftige ich mich mit Python, Systemarchitektur, 
-                Datenbanken und grundlegenden Security-Themen.
-            </p>
-            <p>
-                Dabei ist mir wichtig, nicht einfach fertige Lösungen zu übernehmen.
-                 Ich möchte verstehen, warum etwas funktioniert, Fehler selbst 
-                 nachvollziehen können und meine Kenntnisse Schritt für Schritt
-                  praktisch ausbauen.
-            </p>
-            <p>
-                Langfristig möchte ich meinen beruflichen Weg in die IT verlagern und 
-                mich technisch kontinuierlich weiterentwickeln.
-            </p>
+    <main id="main-content" class="page-shell">
+        <section class="hero glass-panel" id="hero" aria-labelledby="hero-title">
+            <div class="hero-photo">
+                <img src="assets/images/jd-profile.jpeg" alt="Profilbild von JD">
+            </div>
+            <div class="hero-content">
+                <p class="eyebrow">Portfolio &amp; IT-Lernweg</p>
+                <h1 id="hero-title">JD</h1>
+                <p class="hero-text">
+                    Ich baue aktuell meine Grundlagen in Webentwicklung, Programmierung und IT-Systemen aus und setze das Gelernte direkt in eigenen Projekten um.
+                </p>
+                <p class="hero-text muted">
+                    Mein langfristiges Ziel ist der berufliche Quereinstieg in die IT und eine kontinuierliche technische Weiterentwicklung.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">Projekte ansehen</a>
+                    <a class="button button-secondary" href="https://github.com/JayD-Labs" target="_blank" rel="noopener noreferrer">GitHub öffnen</a>
+                </div>
+            </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills & Technologien</h2>
+        <section class="content-section glass-panel" id="about" aria-labelledby="about-title">
+            <div class="section-heading">
+                <p class="eyebrow">01</p>
+                <h2 id="about-title">Über mich</h2>
+            </div>
 
-            <ul>
-                <li>
-                    <button class="skill-header" aria-expanded="false">
-                        <span>HTML</span>
-                        <small>In Anwendung</small>
-                    </button>
-
-                    <p>
-                        Grundlagen in semantischem HTML und dem strukturierten
-                        Aufbau von Webseiten.
-                    </p>
-                </li>
-
-                <li>
-                    <button class="skill-header" aria-expanded="false">
-                        <span>CSS</span>
-                        <small>In Anwendung</small>
-                    </button>
-
-                    <p>
-                        Grundlagen in Styling, Layouts, Flexbox und
-                        responsiver Gestaltung.
-                    </p>
-                </li>
-
-                <li>
-                    <button class="skill-header" aria-expanded="false">
-                        <span>Git & GitHub</span>
-                        <small>In Anwendung</small>
-                    </button>
-
-                    <p>
-                        Arbeiten mit Repositories, Commits, Branches,
-                        Merges und grundlegenden Git-Workflows.
-                    </p>
-                </li>
-
-                <li>
-                    <button class="skill-header" aria-expanded="false">
-                        <span>Python</span>
-                        <small>Grundlagen</small>
-                    </button>
-
-                    <p>
-                        Grundverständnis von Python und erste praktische
-                        Erfahrungen mit eigenen Projekten.
-                    </p>
-                </li>
-
-                <li>
-                    <button class="skill-header" aria-expanded="false">
-                        <span>Linux</span>
-                        <small>In Anwendung</small>
-                    </button>
-
-                    <p>
-                        Arbeiten mit Linux, Raspberry Pi und grundlegenden
-                        Terminal-Befehlen.
-                    </p>
-                </li>
-
-                <li>
-                    <button class="skill-header" aria-expanded="false   ">
-                        <span>Supabase / PostgreSQL</span>
-                        <small>Erste Erfahrung</small>
-                    </button>
-
-                    <p>
-                        Erste praktische Erfahrungen mit Datenbanken,
-                        Tabellen, SQL und Supabase.
-                    </p>
-                </li>
-            </ul>
+            <div class="prose">
+                <p>Ich interessiere mich schon länger für IT und beschäftige mich inzwischen gezielt mit Programmierung, Webentwicklung und Systemen.</p>
+                <p>Aktuell baue ich meine Grundlagen in HTML, CSS sowie Git und GitHub aus und setze das Gelernte direkt in eigenen Projekten wie diesem Portfolio um. Parallel beschäftige ich mich mit Python, Systemarchitektur, Datenbanken und grundlegenden Security-Themen.</p>
+                <p>Dabei ist mir wichtig, nicht einfach fertige Lösungen zu übernehmen. Ich möchte verstehen, warum etwas funktioniert, Fehler selbst nachvollziehen können und meine Kenntnisse Schritt für Schritt praktisch ausbauen.</p>
+                <p>Langfristig möchte ich meinen beruflichen Weg in die IT verlagern und mich technisch kontinuierlich weiterentwickeln.</p>
+            </div>
         </section>
-        
-        <section id="certificates">
-            <h2>Zertifikate & Nachweise</h2>
 
-            <article>
-                <h3>Microsoft Applied Skills / AI Prompting</h3>
+        <section class="content-section glass-panel" id="skills" aria-labelledby="skills-title">
+            <div class="section-heading">
+                <p class="eyebrow">02</p>
+                <h2 id="skills-title">Skills &amp; Technologien</h2>
+            </div>
+
+            <div class="card-grid skill-grid">
+                <article class="card skill-card">
+                    <h3>HTML5</h3>
+                    <p class="status-label">Status: Grundlagen</p>
+                    <p class="muted">Aktuelles Projekt: JD Portfolio</p>
+                </article>
+                <article class="card skill-card">
+                    <h3>CSS3</h3>
+                    <p class="status-label">Status: Grundlagen</p>
+                    <p class="muted">Aktuelles Projekt: JD Portfolio</p>
+                </article>
+                <article class="card skill-card">
+                    <h3>Git &amp; GitHub</h3>
+                    <p class="status-label">Status: Grundlagen</p>
+                    <p class="muted">Aktuelles Projekt: JD Portfolio</p>
+                </article>
+                <article class="card skill-card">
+                    <h3>Python</h3>
+                    <p class="status-label">Status: Erste Erfahrungen</p>
+                </article>
+                <article class="card skill-card">
+                    <h3>PostgreSQL / Supabase</h3>
+                    <p class="status-label">Status: Erste Erfahrungen</p>
+                    <p class="muted">Aktuelles Projekt: Axiom Core</p>
+                </article>
+                <article class="card skill-card">
+                    <h3>Linux</h3>
+                    <p class="status-label">Status: Erste Erfahrungen</p>
+                    <p class="muted">Aktuelles Projekt: Raspberry Pi zuhause</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section glass-panel" id="certificates" aria-labelledby="certificates-title">
+            <div class="section-heading section-heading-with-action">
+                <div>
+                    <p class="eyebrow">03</p>
+                    <h2 id="certificates-title">Zertifikate &amp; Nachweise</h2>
+                </div>
+                <a class="button button-secondary" href="https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements" target="_blank" rel="noopener noreferrer">Microsoft-Learn-Profil</a>
+            </div>
+
+            <div class="card-grid certificate-grid">
+                <article class="card certificate-card">
+                    <div>
+                        <p class="card-kicker">Microsoft Applied Skills</p>
+                        <h3>AI Prompting</h3>
+                        <p>Grundlagen des KI-gestützten Promptings mit Fokus auf die Erstellung klarer und zielgerichteter Eingaben. Vermittelt wurden grundlegende Prompting-Techniken, praktische Anwendungsbeispiele sowie der effektive Einsatz von KI-Tools.</p>
+                    </div>
+                    <a class="button button-secondary" href="assets/certificates/microsoft-ai-prompting.pdf" target="_blank" rel="noopener noreferrer">PDF öffnen</a>
+                </article>
+
+                <article class="card certificate-card certificate-course">
+                    <div>
+                        <p class="card-kicker">Kursnachweis</p>
+                        <h3>Website erstellen mit HTML &amp; CSS (Anfänger)</h3>
+                        <p>Grundlagen der Webentwicklung mit HTML und CSS. Behandelt wurden der strukturierte Aufbau von Webseiten, grundlegendes Styling, Barrierefreiheit sowie bewährte Methoden für eine saubere und benutzerfreundliche Webentwicklung.</p>
+                    </div>
+
+                    <a class="button button-secondary" href="assets/certificates/html-css-Anfänger-Zertifikat.pdf" target="_blank" rel="noopener noreferrer">Kurs-PDF öffnen</a>
+
+                    <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="certificate-details">
+                        Enthaltene Badges anzeigen
+                        <span aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="accordion-panel" id="certificate-details" hidden>
+                        <article class="nested-card">
+                            <h3>Erste Website mit HTML erstellen</h3>
+                            <p>Grundlagen und erste Befehle in HTML ausgeführt. Eine kleine Übungswebsite erstellt.</p>
+                            <a href="assets/certificates/html-grundkenntnisse.pdf" target="_blank" rel="noopener noreferrer">Badge-PDF öffnen</a>
+                        </article>
+                        <article class="nested-card">
+                            <h3>Verwenden von CSS auf einer Website</h3>
+                            <p>Grundlagen und erste Befehle in CSS ausgeführt. Einbindung von CSS-Dateien in HTML gelernt und erste optische Änderungen gemacht.</p>
+                            <a href="assets/certificates/css-grundlagen.pdf" target="_blank" rel="noopener noreferrer">Badge-PDF öffnen</a>
+                        </article>
+                        <article class="nested-card">
+                            <h3>Grundlagen zur Barrierefreiheit in HTML</h3>
+                            <p>Erste Grundlagen des WCAG-Standards gelernt, darunter Schrift- und Farbaspekte sowie Lighthouse.</p>
+                            <a href="assets/certificates/barrierefreiheit-html.pdf" target="_blank" rel="noopener noreferrer">Badge-PDF öffnen</a>
+                        </article>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section glass-panel" id="projects" aria-labelledby="projects-title">
+            <div class="section-heading">
+                <p class="eyebrow">04</p>
+                <h2 id="projects-title">Projekte</h2>
+            </div>
+
+            <div class="card-grid project-grid">
+                <article class="card project-card">
+                    <div>
+                        <p class="card-kicker">Webentwicklung</p>
+                        <h3>JD Portfolio</h3>
+                        <p>
+                            Mein persönliches Portfolio zur Darstellung meines IT-Lernwegs, meiner Projekte 
+                            und Zertifikate. Die erste Version habe ich eigenständig mit HTML und CSS aufgebaut. 
+                            Das aktuelle Redesign entstand mit KI-Unterstützung auf Basis meiner eigenen 
+                            Anforderungen, Inhalte, Designvorgaben und Prompts. Dabei übernehme ich die Prüfung, 
+                            Anpassung und Weiterentwicklung der generierten Lösungen selbst.
+                        </p>
+                    </div>
+                    <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="project-jd-details">
+                        Projektdetails anzeigen
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-panel" id="project-jd-details" hidden>
+                        <dl class="project-meta">
+                        <div>
+                            <dl class="project-meta">
+                                <div>
+                                    <dt>Technologien</dt>
+                                     <dd>HTML, CSS, JavaScript, Git & GitHub</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Mein Anteil</dt>
+                                        <dd>
+                                            Konzeption, Anforderungen, Inhalte, Designvorgaben,
+                                            Prompting, Tests und Weiterentwicklung
+                                        </dd>
+                                    </div>
+                                    <div>
+                                    <dt>KI-Unterstützung</dt>
+                                    <dd>
+                                        Erstellung und Überarbeitung größerer Teile von HTML,
+                                        CSS und JavaScript auf Basis meiner Vorgaben
+                                    </dd>
+                                    <div>
+                                    <dt>Prompt</dt>
+                                    <dd>
+                                        <a href="assets/prompts/portfolio.md">
+                                            portfolio.md
+                                        </a>
+                                    </dd>
+                                </div>
+                                </div>
+                            </dl>
+                        </div>
+                </article>
+
+                <article class="card project-card">
+                    <div>
+                        <p class="card-kicker">KI &amp; Automatisierung</p>
+                        <h3>Axiom Core</h3>
+                        <p>Ein persönliches KI- und Automatisierungsprojekt zur Entwicklung eines modularen Assistenzsystems. Der Fokus liegt auf Systemarchitektur, APIs, Datenbanken, Automatisierung und der Anbindung verschiedener Dienste.</p>
+                    </div>
+                    <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="project-axiom-details">
+                        Projektdetails anzeigen
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-panel" id="project-axiom-details" hidden>
+                        <dl class="project-meta">
+                            <div><dt>Schwerpunkte</dt><dd>Systemarchitektur, APIs, Datenbanken, Automatisierung, Dienste</dd></div>
+                            <div><dt>Eigenanteil</dt><dd class="placeholder-text">Angabe ergänzen</dd></div>
+                            <div><dt>KI-Unterstützung</dt><dd class="placeholder-text">Angabe ergänzen</dd></div>
+                            <div><dt>GitHub-Repo</dt><dd class="placeholder-text">Repo-Link ergänzen</dd></div>
+                        </dl>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section glass-panel" id="prompts" aria-labelledby="prompts-title">
+            <div class="section-heading">
+                <p class="eyebrow">05</p>
+                <h2 id="prompts-title">Prompts</h2>
+            </div>
+
+            <article class="card prompt-card">
+                <p class="card-kicker">Website Prompt</p>
+
+                <h3>JD Portfolio V2</h3>
+
                 <p>
-                    Grundlagen des KI-gestützten Promptings mit Fokus auf die Erstellung klarer 
-                    und zielgerichteter Eingaben. Vermittelt wurden grundlegende Prompting-Techniken,
-                    praktische Anwendungsbeispiele sowie der effektive Einsatz von KI-Tools.
+                    Der Prompt, mit dem das vollständige Redesign meines
+                    Portfolios geplant und mit KI-Unterstützung umgesetzt wurde.
+                    Er enthält Anforderungen an Struktur, Design,
+                    Barrierefreiheit, Responsive-Verhalten und technische Umsetzung.
                 </p>
 
-                <a href="https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements?tab=tab-modules#badges-section"
-                target="_blank"
-                rel="noopener noreferrer">
-                    Badge ansehen
+                <a
+                    class="button button-secondary"
+                    href="prompts/portfolio.md">
+                    portfolio.md öffnen
                 </a>
             </article>
-
-            <article>
-                <h3>Website erstellen mit HTML & CSS (Anfänger)</h3>
-                <p>
-                    Grundlagen der Webentwicklung mit HTML und CSS. 
-                    Behandelt wurden der strukturierte Aufbau von Webseiten, 
-                    grundlegendes Styling, Barrierefreiheit sowie bewährte 
-                    Methoden für eine saubere und benutzerfreundliche Webentwicklung.
-                </p>
-
-                <a href="https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements?tab=tab-learning-paths#trophies-section"
-                target="_blank"
-                rel="noopener noreferrer">
-                    Badge ansehen
-                </a>
-            </article>
         </section>
-
-        <section id="projects">
-            <h2>Projekte</h2>
-
-            <article>
-                <h3>JD Portfolio</h3>
-
-                <p>
-                    Meine erste selbst entwickelte Portfolio-Website. 
-                    Das Projekt dient dazu, meine Kenntnisse in HTML,
-                    CSS, Git und GitHub praktisch auszubauen.
-                </p>
-            </article>
-
-            <article>
-                <h3>Axiom Core</h3>
-
-                <p>
-                    Ein persönliches KI- und Automatisierungsprojekt 
-                    zur Entwicklung eines modularen Assistenzsystems.
-                    Der Fokus liegt auf Systemarchitektur, APIs,
-                    Datenbanken, Automatisierung und der Anbindung 
-                    verschiedener Dienste.
-
-                </p>
-            </article>
-        </section>
-
     </main>
 
+    <footer class="site-footer">
+        <div>
+            <strong>JD Portfolio</strong>
+            <p class="muted">Persönlicher IT-Lernweg, Projekte und Nachweise.</p>
+        </div>
+        <nav aria-label="Footer-Navigation">
+            <a href="https://jd-schuldt.de">Home</a>
+            <a href="https://prompting.jd-schuldt.de">Prompts</a>
+            <a href="https://github.com/JayD-Labs" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/justin-daniel-schuldt-23577b3b0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements" target="_blank" rel="noopener noreferrer">Microsoft Learn</a>
+            <span class="placeholder-text">Impressum-Link ergänzen</span>
+        </nav>
+    </footer>
+
+    <button class="button button-primary back-to-top" type="button" id="back-to-top" aria-label="Zurück zum Seitenanfang" hidden>
+        ↑
+    </button>
 </body>
 </html>
-
