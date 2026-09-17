@@ -49,6 +49,40 @@ Meine Aufgaben dabei:
 
 Die KI unterstützt insbesondere bei der Erstellung und Überarbeitung größerer Teile von HTML, CSS und JavaScript.
 
+## Shared Layout
+
+Header und Footer werden als wiederverwendbare Komponenten gepflegt und auf mehreren Seiten dynamisch eingebunden.
+
+Dafür werden folgende Dateien verwendet:
+
+- `components/header.html`
+- `components/footer.html`
+- `components.js`
+
+`components.js` lädt die Komponenten per `fetch()` und fügt sie in die vorgesehenen Platzhalter der jeweiligen Seite ein.
+
+Dadurch müssen Navigation und Footer nicht auf jeder Unterseite separat gepflegt werden.
+
+Der Dark-/Light-Mode funktioniert weiterhin auch mit dem dynamisch geladenen Header. Die Theme-Auswahl wird im Browser gespeichert und auf den Seiten wieder angewendet.
+
+## Vault-Seite
+
+Unter `/vault/` befindet sich eine eigene Seite für meinen privat betriebenen Vaultwarden-Passwortmanager.
+
+Die Seite dient als Portfolio-Erweiterung und zeigt den Verbindungsstatus des privaten Dienstes an.
+
+Enthalten sind unter anderem:
+
+- gemeinsamer Header und Footer
+- gemeinsames Seitenlayout
+- Dark-/Light-Mode
+- eigener Vaultwarden-Statusbereich
+- Erreichbarkeitsprüfung per JavaScript
+- Online-, Offline- und Prüfstatus
+- Weiterleitung zum Vault bei erfolgreicher Verbindung
+
+Der eigentliche Passwortmanager bleibt unabhängig von der Portfolio-Website geschützt und ist ausschließlich über meine private Netzwerkinfrastruktur erreichbar.
+
 ## Prompting
 
 Der zentrale Prompt für das V2-Redesign befindet sich direkt im Repository:
@@ -79,11 +113,15 @@ Dadurch ist nachvollziehbar, welche Anforderungen der KI für die Erstellung der
 - Responsive Layout
 - Profilbereich mit Profilbild
 - feste Top-Navigation
+- wiederverwendbarer Header und Footer
+- dynamisches Laden gemeinsamer Komponenten
 - zusätzliche Seitennavigation auf größeren Displays
 - Skills und Technologien
 - Zertifikate und Nachweise
 - Projektübersicht
 - Prompt-Bereich
+- separate Vault-Seite
+- JavaScript-basierte Vault-Erreichbarkeitsprüfung
 - zugängliche Akkordeons
 - Tastaturnavigation
 - sichtbare Fokuszustände
@@ -111,7 +149,18 @@ jd-portfolio/
 │   └── prompts/
 │       └── portfolio.md
 │
+├── components/
+│   ├── footer.html
+│   └── header.html
+│
+├── vault/
+│   ├── index.html
+│   ├── vault.css
+│   └── vault.js
+│
+├── .gitignore
 ├── CNAME
+├── components.js
 ├── index.html
 ├── jd-design-tokens.css
 ├── style.css
@@ -126,6 +175,8 @@ Das Projekt dient nicht nur als fertige Website, sondern auch als Dokumentation 
 Version 1 entstand als klassisches Lernprojekt, bei dem ich die Website selbst aufgebaut habe.
 
 Mit Version 2 beschäftige ich mich zusätzlich damit, wie KI sinnvoll in einen Entwicklungsprozess integriert werden kann – von der Formulierung technischer Anforderungen über Prompting bis zur Prüfung und Weiterentwicklung der erzeugten Ergebnisse.
+
+Zusätzlich nutze ich das Projekt inzwischen, um wiederverwendbare Frontend-Strukturen, JavaScript-basierte Komponenten, mehrseitige Layouts und die Anbindung eigener Self-Hosting-Projekte praktisch umzusetzen.
 
 Git und GitHub nutze ich dabei zur Versionsverwaltung und zur nachvollziehbaren Dokumentation der Entwicklung.
 
