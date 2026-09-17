@@ -8,27 +8,16 @@
 
     <link rel="stylesheet" href="jd-design-tokens.css">
     <link rel="stylesheet" href="style.css">
+
+    <script src="components.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+    <a class="skip-link" href="#main-content">
+        Zum Hauptinhalt springen
+    </a>
 
-    <header class="site-header">
-        <nav class="top-nav" aria-label="Hauptnavigation">
-            <a class="brand" href="https://jd-schuldt.de" aria-label="JD – zur Hauptwebsite">JD</a>
-
-            <div class="top-nav-links">
-                <a href="https://jd-schuldt.de">Home</a>
-                <a href="https://github.com/JayD-Labs" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/justin-daniel-schuldt-23577b3b0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements" target="_blank" rel="noopener noreferrer">Microsoft Learn</a>
-            </div>
-
-            <button class="button button-secondary theme-toggle" type="button" id="theme-toggle" aria-pressed="false">
-                <span class="theme-toggle-label">Light Mode</span>
-            </button>
-        </nav>
-    </header>
+    <div id="site-header"></div>
 
     <nav class="side-nav" aria-label="Seitennavigation">
         <a href="#hero">Hero</a>
@@ -54,8 +43,14 @@
                     Mein langfristiges Ziel ist der berufliche Quereinstieg in die IT und eine kontinuierliche technische Weiterentwicklung.
                 </p>
                 <div class="hero-actions">
-                    <a class="button button-primary" href="#projects">Projekte ansehen</a>
-                    <a class="button button-secondary" href="https://github.com/JayD-Labs" target="_blank" rel="noopener noreferrer">GitHub öffnen</a>
+                    <a class="button button-primary" href="#projects">
+                        Projekte ansehen
+                    </a>
+                    <a class="button button-secondary" href="https://github.com/JayD-Labs" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    GitHub öffnen
+                </a>
                 </div>
             </div>
         </section>
@@ -346,22 +341,15 @@
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div>
-            <strong>JD Portfolio</strong>
-            <p class="muted">Persönlicher IT-Lernweg, Projekte und Nachweise.</p>
-        </div>
-        <nav aria-label="Footer-Navigation">
-            <a href="https://jd-schuldt.de">Home</a>
-            <a href="https://prompting.jd-schuldt.de">Prompts</a>
-            <a href="https://github.com/JayD-Labs" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/justin-daniel-schuldt-23577b3b0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://learn.microsoft.com/de-de/users/justindanielschuldt-7930/achievements" target="_blank" rel="noopener noreferrer">Microsoft Learn</a>
-            <span class="placeholder-text">Impressum-Link ergänzen</span>
-        </nav>
-    </footer>
+    <div id="site-footer"></div>
 
-    <button class="button button-primary back-to-top" type="button" id="back-to-top" aria-label="Zurück zum Seitenanfang" hidden>
+    <button 
+        class="button button-primary back-to-top" 
+        type="button" 
+        id="back-to-top" 
+        aria-label="Zurück zum Seitenanfang"
+         hidden
+    >
         ↑
     </button>
 </body>
