@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JD Vault</title>
+
+    <link rel="stylesheet" href="../jd-design-tokens.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="vault.css">
+    
+    <script src="vault.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <section class="glass-panel">
+            <p class="eyebrow">JD Private Services</p>
+
+            <h1>JD Vault</h1>
+
+            <p>
+                Mein privater Passwort-Manager ist ausschließlich
+                über mein VPN erreichbar.
+            </p>
+
+            <div class="vault-status" id="vault-status">
+                <div class="status-heading">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <p class="status-label">Verbindungsstatus</p>
+                </div>
+
+                <strong id="vault-status-title">
+                    Vault nicht erreichbar
+                </strong>
+
+                <p class="muted" id="vault-status-message">
+                    Stelle sicher, dass du mit meinem privaten VPN verbunden bist.
+                </p>
+
+                <button
+                    class="button button-secondary"
+                    id="vault-retry"
+                    type="button"
+                >
+                    Verbindung erneut prüfen
+                </button>
+            </div>        
+        </section>
+    </main>
+</body>
+</html>

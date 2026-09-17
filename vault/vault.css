@@ -1,0 +1,169 @@
+body {
+    min-height: 100vh;
+}
+
+main {
+    width: calc(100% - 3rem);
+    max-width: 42rem;
+
+    margin: auto;
+}
+
+.glass-panel {
+    padding: 2rem;
+}
+
+.vault-status {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--color-surface) 72%,
+            transparent
+        );
+
+    border:
+        1px solid
+        color-mix(
+            in srgb,
+            var(--color-error) 55%,
+            transparent
+        );
+
+    border-radius: var(--radius-md);
+}
+
+.vault-status strong {
+    display: block;
+
+    margin:
+        0.5rem
+        0;
+
+    color: var(--color-error);
+}
+
+.status-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.status-heading .status-label {
+    margin-bottom: 0;
+}
+
+.status-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+
+    flex: 0 0 auto;
+
+    border-radius: 999px;
+
+    background: var(--color-error);
+
+    box-shadow:
+        0 0 0 0.25rem
+        color-mix(
+            in srgb,
+            var(--color-error) 16%,
+            transparent
+        );
+}
+
+.vault-status .button {
+    margin-top: 1rem;
+}
+
+
+/* =========================
+   is-checking
+   ========================= */
+
+.vault-status.is-checking {
+    border-color:
+        color-mix(
+            in srgb,
+            var(--color-warning) 55%,
+            transparent
+        );
+}
+
+.vault-status.is-checking .status-dot {
+    background: var(--color-warning);
+
+    box-shadow:
+        0 0 0 0.25rem
+        color-mix(
+            in srgb,
+            var(--color-warning) 16%,
+            transparent
+        );
+}
+
+.vault-status.is-checking strong {
+    color: var(--color-warning);
+}
+
+
+/* =========================
+   is-online
+   ========================= */
+
+.vault-status.is-online {
+    border-color:
+        color-mix(
+            in srgb,
+            var(--color-primary) 55%,
+            transparent
+        );
+}
+
+.vault-status.is-online .status-dot {
+    background: var(--color-primary);
+
+    box-shadow:
+        0 0 0 0.25rem
+        color-mix(
+            in srgb,
+            var(--color-primary) 16%,
+            transparent
+        );
+}
+
+.vault-status.is-online strong {
+    color: var(--color-primary);
+}
+
+
+/* =========================
+   is-offline
+   ========================= */
+
+.vault-status.is-offline {
+    border-color:
+        color-mix(
+            in srgb,
+            var(--color-error) 55%,
+            transparent
+        );
+}
+
+.vault-status.is-offline .status-dot {
+    background: var(--color-error);
+
+    box-shadow:
+        0 0 0 0.25rem
+        color-mix(
+            in srgb,
+            var(--color-error) 16%,
+            transparent
+        );
+}
+
+.vault-status.is-offline strong {
+    color: var(--color-error);
+}
