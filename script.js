@@ -5,40 +5,62 @@
    ========================= */
 
 const root = document.documentElement;
-const themeToggle = document.querySelector("#theme-toggle");
-const themeToggleLabel = themeToggle?.querySelector(".theme-toggle-label");
 const THEME_STORAGE_KEY = "jd-theme";
+
 
 function isValidTheme(theme) {
     return theme === "light" || theme === "dark";
 }
 
+
 function getInitialTheme() {
     try {
-        const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+        const savedTheme =
+            localStorage.getItem(THEME_STORAGE_KEY);
 
         if (isValidTheme(savedTheme)) {
             return savedTheme;
         }
     } catch (error) {
-        console.warn("Theme konnte nicht aus localStorage gelesen werden.", error);
+        console.warn(
+            "Theme konnte nicht aus localStorage gelesen werden.",
+            error
+        );
     }
 
     return "dark";
 }
 
+
 function updateThemeControl(theme) {
+    const themeToggle =
+        document.querySelector("#theme-toggle");
+
+    const themeToggleLabel =
+        themeToggle?.querySelector(".theme-toggle-label");
+
     if (!themeToggle || !themeToggleLabel) {
         return;
     }
 
-    const isDark = theme === "dark";
-    themeToggle.setAttribute("aria-pressed", String(!isDark));
-    themeToggleLabel.textContent = isDark ? "Light Mode" : "Dark Mode";
+    const isDark =
+        theme === "dark";
+
+    themeToggle.setAttribute(
+        "aria-pressed",
+        String(!isDark)
+    );
+
+    themeToggleLabel.textContent =
+        isDark
+            ? "Light Mode"
+            : "Dark Mode";
 }
+
 
 function applyTheme(theme, save = false) {
     root.dataset.theme = theme;
+
     updateThemeControl(theme);
 
     if (!save) {
@@ -46,18 +68,55 @@ function applyTheme(theme, save = false) {
     }
 
     try {
-        localStorage.setItem(THEME_STORAGE_KEY, theme);
+        localStorage.setItem(
+            THEME_STORAGE_KEY,
+            theme
+        );
     } catch (error) {
-        console.warn("Theme konnte nicht in localStorage gespeichert werden.", error);
+        console.warn(
+            "Theme konnte nicht gespeichert werden.",
+            error
+        );
     }
 }
 
+
+/* Gespeichertes Theme direkt anwenden */
 applyTheme(getInitialTheme());
 
-themeToggle?.addEventListener("click", () => {
-    const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
-    applyTheme(nextTheme, true);
-});
+
+/* Header wurde dynamisch geladen */
+document.addEventListener(
+    "layout:loaded",
+    () => {
+        updateThemeControl(root.dataset.theme);
+    }
+);
+
+
+/* Klicks auch auf später geladene Elemente erkennen */
+document.addEventListener(
+    "click",
+    (event) => {
+        if (!(event.target instanceof Element)) {
+            return;
+        }
+
+        const themeToggle =
+            event.target.closest("#theme-toggle");
+
+        if (!themeToggle) {
+            return;
+        }
+
+        const nextTheme =
+            root.dataset.theme === "dark"
+                ? "light"
+                : "dark";
+
+        applyTheme(nextTheme, true);
+    }
+);
 
 /* =========================
    Akkordeons

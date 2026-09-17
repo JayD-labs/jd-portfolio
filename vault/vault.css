@@ -1,12 +1,12 @@
-body {
-    min-height: 100vh;
-}
-
 main {
     width: calc(100% - 3rem);
     max-width: 42rem;
-
     margin: auto;
+    margin-bottom: 5rem;
+}
+
+.vault-shell {
+    max-width: 42rem;
 }
 
 .glass-panel {
