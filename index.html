@@ -18,8 +18,10 @@
   <body>
     <a class="skip-link" href="#main-content"> Zum Hauptinhalt springen </a>
 
+    <!-- HEADER: Gemeinsamer Seitenkopf aus components.js -->
     <div id="site-header"></div>
 
+    <!-- NAVIGATION: Seitliche Sprunglinks -->
     <nav class="side-nav" aria-label="Seitennavigation">
       <a href="#hero">Hero</a>
       <a href="#about">Über mich</a>
@@ -30,6 +32,7 @@
     </nav>
 
     <main id="main-content" class="page-shell">
+      <!-- HERO: Profil und Einstieg -->
       <section class="hero glass-panel" id="hero" aria-labelledby="hero-title">
         <div class="hero-photo">
           <img src="assets/images/profile-BnW.jpg" alt="Profilbild von JD" />
@@ -63,6 +66,7 @@
         </div>
       </section>
 
+      <!-- ÜBER MICH: Profiltext -->
       <section
         class="content-section glass-panel"
         id="about"
@@ -97,6 +101,7 @@
         </div>
       </section>
 
+      <!-- SKILLS: Technologien und Lernstand -->
       <section
         class="content-section glass-panel"
         id="skills"
@@ -140,6 +145,7 @@
         </div>
       </section>
 
+      <!-- ZERTIFIKATE: Alle Nachweise im gemeinsamen Karten-Grid -->
       <section
         class="content-section glass-panel"
         id="certificates"
@@ -159,217 +165,223 @@
           >
         </div>
 
-        <!-- Python-Grundlagen -->
-
-        <article class="card certificate-card certificate-course">
-          <div>
-            <p class="card-kicker">Microsoft Learn · Kursnachweis</p>
-
-            <h3>Erste Schritte mit Python – Grundlagen</h3>
-
-            <p>
-              Erfolgreicher Abschluss des Microsoft-Learn-Lernpfads zu den
-              Grundlagen der Programmiersprache Python. Vermittelt wurden die
-              grundlegende Python-Syntax, Variablen, Datentypen,
-              Benutzereingaben, mathematische Operationen sowie bedingte
-              Anweisungen. Ergänzend wurden die Python-Entwicklungsumgebung in
-              Visual Studio Code und die Verwaltung von Python-Paketen mit pip
-              behandelt. Das erworbene Wissen wurde durch die eigenständige
-              Entwicklung eines Python-Notenrechners praktisch angewendet.
-            </p>
-          </div>
-
-          <a
-            class="button button-secondary"
-            href="assets/certificates/python-grundlagen.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Kurs-PDF öffnen
-          </a>
-
-          <button
-            class="accordion-trigger"
-            type="button"
-            aria-expanded="false"
-            aria-controls="python-certificate-details"
-          >
-            Enthaltene Badges anzeigen
-            <span aria-hidden="true">+</span>
-          </button>
-
-          <div class="accordion-panel" id="python-certificate-details" hidden>
-            <article class="nested-card">
-              <h3>Schreiben des ersten Python-Codes</h3>
-
-              <p>
-                Einführung in die Programmiersprache Python und ihre
-                grundlegende Syntax. Erste Python-Programme erstellt, die
-                print()-Funktion kennengelernt und grundlegende Anweisungen zur
-                Ausgabe von Texten ausgeführt.
-              </p>
-
-              <a
-                href="assets/certificates/python-first-code.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Badge-PDF öffnen
-              </a>
-            </article>
-
-            <article class="nested-card">
-              <h3>Daten in Python verarbeiten</h3>
-
-              <p>
-                Grundlagen der Datenverarbeitung mit Python erlernt. Variablen
-                und Datentypen wie int, float und str verwendet,
-                Benutzereingaben verarbeitet und mathematische Berechnungen
-                durchgeführt. Das Wissen wurde durch die eigenständige
-                Entwicklung eines Notenrechners praktisch angewendet.
-              </p>
-
-              <a
-                href="assets/certificates/python-daten.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Badge-PDF öffnen
-              </a>
-            </article>
-
-            <article class="nested-card">
-              <h3>Python mit Visual Studio Code entwickeln</h3>
-
-              <p>
-                Einrichtung und Verwendung einer Python-Entwicklungsumgebung mit
-                Visual Studio Code. Grundlagen der Python-Erweiterungen, der
-                Verwaltung von Python-Paketen mit pip sowie der Arbeit mit
-                virtuellen Umgebungen kennengelernt.
-              </p>
-
-              <a
-                href="assets/certificates/vsc-py-pip-grundlagen.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Badge-PDF öffnen
-              </a>
-            </article>
-
-            <article class="nested-card">
-              <h3>Entscheidungen in Python treffen</h3>
-
-              <p>
-                Grundlagen der bedingten Programmausführung erlernt. Mit if-,
-                elif- und else-Anweisungen gearbeitet, Vergleichsoperatoren
-                kennengelernt und logische Bedingungen zur Steuerung des
-                Programmablaufs verwendet.
-              </p>
-
-              <a
-                href="assets/certificates/python-abfragen.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Badge-PDF öffnen
-              </a>
-            </article>
-          </div>
-        </article>
-
-        <article class="card certificate-card certificate-course">
-          <div>
-            <p class="card-kicker">Microsoft Learn · Kursnachweis</p>
-            <h3>Python – Teil 2: Programme erstellen</h3>
-            <p>
-              Vertiefung der Python-Grundlagen mit Schleifen, Listen und
-              Dictionaries, dem Lesen und Schreiben von Dateien sowie der
-              Strukturierung von Code durch eigene Funktionen. Die Inhalte
-              bilden die Grundlage für größere, wiederverwendbare
-              Python-Programme.
-            </p>
-          </div>
-
-          <a
-            class="button button-secondary"
-            href="assets/certificates/python2-grundlagen2.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Kurs-PDF öffnen</a
-          >
-
-          <button
-            class="accordion-trigger"
-            type="button"
-            aria-expanded="false"
-            aria-controls="python2-certificate-details"
-          >
-            Enthaltene Badges anzeigen
-            <span aria-hidden="true">+</span>
-          </button>
-
-          <div class="accordion-panel" id="python2-certificate-details" hidden>
-            <article class="nested-card">
-              <h3>Aktionen mit Schleifen wiederholen</h3>
-              <p>
-                Wiederholte Programmausführung mit for- und while-Schleifen
-                sowie die Steuerung von Schleifenabläufen kennengelernt.
-              </p>
-              <a
-                href="assets/certificates/python2-schleifen.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Badge-PDF öffnen</a
-              >
-            </article>
-
-            <article class="nested-card">
-              <h3>Daten mit Listen und Dictionaries organisieren</h3>
-              <p>
-                Mehrere Werte in Listen speichern und strukturierte Daten mit
-                Dictionaries verwalten und verarbeiten.
-              </p>
-              <a
-                href="assets/certificates/python2-dict-list.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Badge-PDF öffnen</a
-              >
-            </article>
-
-            <article class="nested-card">
-              <h3>Dateien lesen und schreiben</h3>
-              <p>
-                Dateien mit Python öffnen, Inhalte auslesen und Daten dauerhaft
-                in Dateien speichern.
-              </p>
-              <a
-                href="assets/certificates/python2-read-write.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Badge-PDF öffnen</a
-              >
-            </article>
-
-            <article class="nested-card">
-              <h3>Wiederverwendbaren Code mit Funktionen schreiben</h3>
-              <p>
-                Eigene Funktionen mit def erstellen, Parameter übergeben und
-                Rückgabewerte verwenden, um Programme übersichtlich zu
-                strukturieren.
-              </p>
-              <a
-                href="assets/certificates/python2-def.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Badge-PDF öffnen</a
-              >
-            </article>
-          </div>
-        </article>
-
         <div class="card-grid certificate-grid">
+          <!-- ZERTIFIKAT: Python Teil 1 – Grundlagen -->
+
+          <article class="card certificate-card certificate-course">
+            <div>
+              <p class="card-kicker">Microsoft Learn · Kursnachweis</p>
+
+              <h3>Erste Schritte mit Python – Grundlagen</h3>
+
+              <p>
+                Erfolgreicher Abschluss des Microsoft-Learn-Lernpfads zu den
+                Grundlagen der Programmiersprache Python. Vermittelt wurden die
+                grundlegende Python-Syntax, Variablen, Datentypen,
+                Benutzereingaben, mathematische Operationen sowie bedingte
+                Anweisungen. Ergänzend wurden die Python-Entwicklungsumgebung in
+                Visual Studio Code und die Verwaltung von Python-Paketen mit pip
+                behandelt. Das erworbene Wissen wurde durch die eigenständige
+                Entwicklung eines Python-Notenrechners praktisch angewendet.
+              </p>
+            </div>
+
+            <a
+              class="button button-secondary"
+              href="assets/certificates/python-grundlagen.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Kurs-PDF öffnen
+            </a>
+
+            <button
+              class="accordion-trigger"
+              type="button"
+              aria-expanded="false"
+              aria-controls="python-certificate-details"
+            >
+              Enthaltene Badges anzeigen
+              <span aria-hidden="true">+</span>
+            </button>
+
+            <div class="accordion-panel" id="python-certificate-details" hidden>
+              <article class="nested-card">
+                <h3>Schreiben des ersten Python-Codes</h3>
+
+                <p>
+                  Einführung in die Programmiersprache Python und ihre
+                  grundlegende Syntax. Erste Python-Programme erstellt, die
+                  print()-Funktion kennengelernt und grundlegende Anweisungen
+                  zur Ausgabe von Texten ausgeführt.
+                </p>
+
+                <a
+                  href="assets/certificates/python-first-code.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Badge-PDF öffnen
+                </a>
+              </article>
+
+              <article class="nested-card">
+                <h3>Daten in Python verarbeiten</h3>
+
+                <p>
+                  Grundlagen der Datenverarbeitung mit Python erlernt. Variablen
+                  und Datentypen wie int, float und str verwendet,
+                  Benutzereingaben verarbeitet und mathematische Berechnungen
+                  durchgeführt. Das Wissen wurde durch die eigenständige
+                  Entwicklung eines Notenrechners praktisch angewendet.
+                </p>
+
+                <a
+                  href="assets/certificates/python-daten.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Badge-PDF öffnen
+                </a>
+              </article>
+
+              <article class="nested-card">
+                <h3>Python mit Visual Studio Code entwickeln</h3>
+
+                <p>
+                  Einrichtung und Verwendung einer Python-Entwicklungsumgebung
+                  mit Visual Studio Code. Grundlagen der Python-Erweiterungen,
+                  der Verwaltung von Python-Paketen mit pip sowie der Arbeit mit
+                  virtuellen Umgebungen kennengelernt.
+                </p>
+
+                <a
+                  href="assets/certificates/vsc-py-pip-grundlagen.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Badge-PDF öffnen
+                </a>
+              </article>
+
+              <article class="nested-card">
+                <h3>Entscheidungen in Python treffen</h3>
+
+                <p>
+                  Grundlagen der bedingten Programmausführung erlernt. Mit if-,
+                  elif- und else-Anweisungen gearbeitet, Vergleichsoperatoren
+                  kennengelernt und logische Bedingungen zur Steuerung des
+                  Programmablaufs verwendet.
+                </p>
+
+                <a
+                  href="assets/certificates/python-abfragen.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Badge-PDF öffnen
+                </a>
+              </article>
+            </div>
+          </article>
+
+          <!-- ZERTIFIKAT: Python Teil 2 – Programme erstellen -->
+          <article class="card certificate-card certificate-course">
+            <div>
+              <p class="card-kicker">Microsoft Learn · Kursnachweis</p>
+              <h3>Python – Teil 2: Programme erstellen</h3>
+              <p>
+                Vertiefung der Python-Grundlagen mit Schleifen, Listen und
+                Dictionaries, dem Lesen und Schreiben von Dateien sowie der
+                Strukturierung von Code durch eigene Funktionen. Die Inhalte
+                bilden die Grundlage für größere, wiederverwendbare
+                Python-Programme.
+              </p>
+            </div>
+
+            <a
+              class="button button-secondary"
+              href="assets/certificates/python2-grundlagen2.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Kurs-PDF öffnen</a
+            >
+
+            <button
+              class="accordion-trigger"
+              type="button"
+              aria-expanded="false"
+              aria-controls="python2-certificate-details"
+            >
+              Enthaltene Badges anzeigen
+              <span aria-hidden="true">+</span>
+            </button>
+
+            <div
+              class="accordion-panel"
+              id="python2-certificate-details"
+              hidden
+            >
+              <article class="nested-card">
+                <h3>Aktionen mit Schleifen wiederholen</h3>
+                <p>
+                  Wiederholte Programmausführung mit for- und while-Schleifen
+                  sowie die Steuerung von Schleifenabläufen kennengelernt.
+                </p>
+                <a
+                  href="assets/certificates/python2-schleifen.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Badge-PDF öffnen</a
+                >
+              </article>
+
+              <article class="nested-card">
+                <h3>Daten mit Listen und Dictionaries organisieren</h3>
+                <p>
+                  Mehrere Werte in Listen speichern und strukturierte Daten mit
+                  Dictionaries verwalten und verarbeiten.
+                </p>
+                <a
+                  href="assets/certificates/python2-dict-list.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Badge-PDF öffnen</a
+                >
+              </article>
+
+              <article class="nested-card">
+                <h3>Dateien lesen und schreiben</h3>
+                <p>
+                  Dateien mit Python öffnen, Inhalte auslesen und Daten
+                  dauerhaft in Dateien speichern.
+                </p>
+                <a
+                  href="assets/certificates/python2-read-write.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Badge-PDF öffnen</a
+                >
+              </article>
+
+              <article class="nested-card">
+                <h3>Wiederverwendbaren Code mit Funktionen schreiben</h3>
+                <p>
+                  Eigene Funktionen mit def erstellen, Parameter übergeben und
+                  Rückgabewerte verwenden, um Programme übersichtlich zu
+                  strukturieren.
+                </p>
+                <a
+                  href="assets/certificates/python2-def.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Badge-PDF öffnen</a
+                >
+              </article>
+            </div>
+          </article>
+
+          <!-- ZERTIFIKAT: AI Prompting -->
           <article class="card certificate-card">
             <div>
               <p class="card-kicker">Microsoft Applied Skills</p>
@@ -390,6 +402,7 @@
             >
           </article>
 
+          <!-- ZERTIFIKAT: HTML & CSS für Anfänger -->
           <article class="card certificate-card certificate-course">
             <div>
               <p class="card-kicker">Kursnachweis</p>
@@ -466,6 +479,7 @@
         </div>
       </section>
 
+      <!-- PROJEKTE: Praxisbeispiele und GitHub-Repositories -->
       <section
         class="content-section glass-panel"
         id="projects"
@@ -477,6 +491,7 @@
         </div>
 
         <div class="card-grid project-grid">
+          <!-- PROJEKT: JD Portfolio -->
           <article class="card project-card">
             <div>
               <p class="card-kicker">Webentwicklung</p>
@@ -536,6 +551,7 @@
             </div>
           </article>
 
+          <!-- PROJEKT: Vaultwarden -->
           <article class="card project-card">
             <div>
               <p class="card-kicker">Vaultwarden</p>
@@ -618,6 +634,7 @@
         </div>
       </section>
 
+      <!-- PROMPTS: Dokumentation des Website-Redesigns -->
       <section
         class="content-section glass-panel"
         id="prompts"
@@ -647,8 +664,10 @@
       </section>
     </main>
 
+    <!-- FOOTER: Gemeinsamer Seitenfuß aus components.js -->
     <div id="site-footer"></div>
 
+    <!-- ZURÜCK NACH OBEN: Sprungbutton -->
     <button
       class="button button-primary back-to-top"
       type="button"
