@@ -9,6 +9,14 @@
       content="JD Portfolio – persönliches IT-Portfolio mit Lernweg, Skills, Zertifikaten, Projekten und Prompts."
     />
     <title>JD | Portfolio</title>
+    <!-- PWA: öffentliches Portfolio, keine privaten Anwendungen im App-Scope -->
+    <meta name="theme-color" content="#0e1110" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="JD Portfolio" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/jd-icon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
 
     <link rel="stylesheet" href="jd-design-tokens.css" />
     <link rel="stylesheet" href="style.css" />
@@ -600,6 +608,8 @@
                 <strong>privat auf meiner eigenen Infrastruktur</strong>.
               </p>
             </div>
+
+            <a class="button button-secondary" href="https://vault.jd-schuldt.de/" target="_blank" rel="noopener noreferrer" aria-label="Vaultwarden öffnen (nur über Heimnetz oder WireGuard erreichbar)">Vaultwarden öffnen · VPN erforderlich</a>
 
             <button
               class="accordion-trigger"
