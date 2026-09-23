@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://vault.jd-schuldt.de; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
     <meta
       name="description"
       content="JD Portfolio – persönliches IT-Portfolio mit Lernweg, Skills, Zertifikaten, Projekten und Prompts."
@@ -136,6 +137,21 @@
             <h3>SQLite3</h3>
             <p class="status-label">Status: Erste Erfahrungen</p>
             <p class="muted">Aktuelles Projekt: JD-LifeHub</p>
+          </article>
+          <article class="card skill-card">
+            <h3>FastAPI</h3>
+            <p class="status-label">Status: Erste Erfahrungen</p>
+            <p class="muted">Aktuelles Projekt: JD-AuthService (API-Grundlagen)</p>
+          </article>
+          <article class="card skill-card">
+            <h3>Docker &amp; Docker Compose</h3>
+            <p class="status-label">Status: Erste Erfahrungen</p>
+            <p class="muted">Aktuelles Projekt: Self-hosted Vaultwarden</p>
+          </article>
+          <article class="card skill-card">
+            <h3>Bash &amp; Backups</h3>
+            <p class="status-label">Status: Erste Erfahrungen</p>
+            <p class="muted">Aktuelles Projekt: JD Backup System mit restic</p>
           </article>
           <article class="card skill-card">
             <h3>Linux</h3>
@@ -549,6 +565,26 @@
                 </div>
               </dl>
             </div>
+          </article>
+
+          <!-- PROJEKT: JD Backup System -->
+          <article class="card project-card">
+            <div>
+              <p class="card-kicker">Linux · Bash · Datensicherung</p>
+              <h3>JD Backup System</h3>
+              <p>Eigenes Backup-Projekt für meine Linux-Projekte und meinen selbst gehosteten Passwortmanager. Ich beschäftige mich mit automatisierbaren Sicherungen, restic, SQLite-Backups und Protokollierung.</p>
+            </div>
+            <a class="button button-secondary" href="https://github.com/JayD-labs/jd-backup-system" target="_blank" rel="noopener noreferrer">Repository öffnen</a>
+          </article>
+
+          <!-- PROJEKT: JD LifeHub / AuthService -->
+          <article class="card project-card">
+            <div>
+              <p class="card-kicker">Python · FastAPI · SQLite</p>
+              <h3>JD-LifeHub – AuthService</h3>
+              <p>Ein Lernprojekt für einen eigenen Authentifizierungsdienst. Die ersten API-Grundlagen und ein Status-Endpunkt sind umgesetzt; Benutzerkonten und sichere Anmeldung sind als nächste Entwicklungsschritte geplant.</p>
+            </div>
+            <a class="button button-secondary" href="https://github.com/JayD-labs/jd-authservice" target="_blank" rel="noopener noreferrer">Repository öffnen</a>
           </article>
 
           <!-- PROJEKT: Vaultwarden -->
