@@ -119,6 +119,54 @@ document.addEventListener(
 );
 
 /* =========================
+   Mobile / Tablet Navigation
+   ========================= */
+
+const desktopNavigation = window.matchMedia("(min-width: 72rem)");
+
+function closeMobileMenu(restoreFocus = false) {
+    const button = document.querySelector("#menu-toggle");
+    const links = document.querySelector("#primary-navigation");
+
+    if (!button || !links) return;
+
+    const wasOpen = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-label", "Menü öffnen");
+    links.classList.remove("is-open");
+
+    if (restoreFocus && wasOpen && !desktopNavigation.matches) {
+        button.focus();
+    }
+}
+
+document.addEventListener("click", (event) => {
+    if (!(event.target instanceof Element)) return;
+
+    const button = event.target.closest("#menu-toggle");
+    const links = document.querySelector("#primary-navigation");
+
+    if (button && links) {
+        const opening = button.getAttribute("aria-expanded") !== "true";
+        button.setAttribute("aria-expanded", String(opening));
+        button.setAttribute("aria-label", opening ? "Menü schließen" : "Menü öffnen");
+        links.classList.toggle("is-open", opening);
+        return;
+    }
+
+    if (event.target.closest("#primary-navigation a") ||
+        !event.target.closest(".top-nav")) {
+        closeMobileMenu();
+    }
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMobileMenu(true);
+});
+
+desktopNavigation.addEventListener("change", () => closeMobileMenu());
+
+/* =========================
    Akkordeons
    ========================= */
 
