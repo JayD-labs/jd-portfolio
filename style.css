@@ -1172,20 +1172,7 @@ code {
     }
 
 
-    .hero {
-        grid-template-columns:
-            minmax(14rem, 0.8fr)
-            minmax(0, 1.8fr);
-
-        align-items:
-            center;
-    }
-
-
-    .hero-photo {
-        min-height:
-            21rem;
-    }
+    /* Bild und Text bleiben bis zu ausreichend breiten Viewports untereinander. */
 
 
     .section-heading-with-action {
@@ -1594,3 +1581,25 @@ body::before {
 
 
 
+
+/* Hero: erst bei ausreichendem Platz nebeneinander; minmax(0, ...) verhindert
+   ein Aufweiten der Textspalte durch lange Inhalte bei schmalen Fenstern. */
+@media (min-width: 64rem) {
+    .hero {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.8fr);
+        align-items: center;
+    }
+
+    .hero-photo {
+        min-height: 21rem;
+    }
+}
+
+.hero-content {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.hero-photo {
+    min-width: 0;
+}
