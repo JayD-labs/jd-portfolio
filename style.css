@@ -1713,3 +1713,31 @@ body::before {
         margin-left: 0;
     }
 }
+
+/* =========================
+   PWA / iOS: Header über dem Seiteninhalt halten
+   ========================= */
+
+/* #site-header ist das direkte Body-Kind und damit der relevante
+   Stacking-Context. Ein z-index nur auf .site-header reicht nicht. */
+#site-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Der äußere Container ist bereits fixiert; kein zweites Fixed-Layout. */
+#site-header .site-header {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+}
+
+/* Undurchsichtige Flächen verhindern durchscheinende Texte beim Scrollen. */
+#site-header .top-nav,
+#site-header .top-nav-links.is-open {
+    background: var(--color-surface);
+}
