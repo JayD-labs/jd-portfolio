@@ -1,191 +1,102 @@
 # JD Portfolio
 
-Meine persönliche Portfolio-Website und gleichzeitig ein praktisches Projekt für meinen Einstieg in die IT.
+**Persönliches IT-Portfolio und praxisorientiertes Webentwicklungsprojekt von JD.**
 
-🌐 **Live:** [jd-schuldt.de](https://jd-schuldt.de)
+🌐 **Live-Demo:** [jd-schuldt.de](https://jd-schuldt.de) · **Quellcode:** [JayD-labs/jd-portfolio](https://github.com/JayD-labs/jd-portfolio)
 
-## Über das Projekt
+## Projekt und Ziel
 
-Das Portfolio zeigt meinen aktuellen IT-Lernweg, meine Fähigkeiten, Zertifikate, Projekte und ausgewählte Prompts.
+Die Website dokumentiert meinen Weg in die IT: Grundlagen und praktische Erfahrungen, abgeschlossene Lernmodule, Zertifikatsnachweise sowie eigene Projekte. Gleichzeitig dient das Repository als nachvollziehbares Entwicklungsprojekt für HTML, CSS, JavaScript und Git/GitHub.
 
-Die erste Version der Website habe ich eigenständig mit HTML und CSS aufgebaut, um Grundlagen in Webentwicklung, Git und GitHub praktisch zu lernen.
-
-Mit Version 2 wurde das Portfolio vollständig überarbeitet. Das Redesign entstand mit KI-Unterstützung auf Basis meiner eigenen Anforderungen, Inhalte, Designvorgaben und Prompts.
-
-Dabei nutze ich KI nicht nur zur Generierung von Code, sondern beschäftige mich mit den erzeugten Lösungen, prüfe sie, passe sie an und entwickle sie iterativ weiter.
-
-## Versionen
-
-### V1
-
-Die erste Version des Portfolios wurde von mir eigenständig entwickelt.
-
-Schwerpunkte:
-
-- HTML5
-- CSS3
-- Git & GitHub
-- Responsive Design
-- erste Accessibility-Grundlagen
-- GitHub Pages
-- eigene Domain
-
-### V2
-
-Vollständiges Redesign des Portfolios mit KI-Unterstützung und strukturiertem Prompting.
-
-Meine Aufgaben dabei:
-
-- Anforderungen definieren
-- Inhalte erstellen
-- Seitenstruktur planen
-- Designvorgaben festlegen
-- Design-Tokens festlegen und einsetzen
-- Prompts erstellen und überarbeiten
-- generierten Code prüfen
-- Fehler analysieren
-- Änderungen testen
-- Lösungen iterativ weiterentwickeln
-
-Die KI unterstützt insbesondere bei der Erstellung und Überarbeitung größerer Teile von HTML, CSS und JavaScript.
-
-## Shared Layout
-
-Header und Footer werden als wiederverwendbare Komponenten gepflegt und auf mehreren Seiten dynamisch eingebunden.
-
-Dafür werden folgende Dateien verwendet:
-
-- `components/header.html`
-- `components/footer.html`
-- `components.js`
-
-`components.js` lädt die Komponenten per `fetch()` und fügt sie in die vorgesehenen Platzhalter der jeweiligen Seite ein.
-
-Dadurch müssen Navigation und Footer nicht auf jeder Unterseite separat gepflegt werden.
-
-Der Dark-/Light-Mode funktioniert weiterhin auch mit dem dynamisch geladenen Header. Die Theme-Auswahl wird im Browser gespeichert und auf den Seiten wieder angewendet.
-
-## Vault-Seite
-
-Unter `/vault/` befindet sich eine eigene Seite für meinen privat betriebenen Vaultwarden-Passwortmanager.
-
-Die Seite dient als Portfolio-Erweiterung und zeigt den Verbindungsstatus des privaten Dienstes an.
-
-Enthalten sind unter anderem:
-
-- gemeinsamer Header und Footer
-- gemeinsames Seitenlayout
-- Dark-/Light-Mode
-- eigener Vaultwarden-Statusbereich
-- Erreichbarkeitsprüfung per JavaScript
-- Online-, Offline- und Prüfstatus
-- Weiterleitung zum Vault bei erfolgreicher Verbindung
-
-Der eigentliche Passwortmanager bleibt unabhängig von der Portfolio-Website geschützt und ist ausschließlich über meine private Netzwerkinfrastruktur erreichbar.
-
-## Prompting
-
-Der zentrale Prompt für das V2-Redesign befindet sich direkt im Repository:
-
-[`assets/prompts/portfolio.md`](assets/prompts/portfolio.md)
-
-Er enthält unter anderem Anforderungen an:
-
-- Seitenstruktur
-- Inhalte
-- Responsive Design
-- Accessibility
-- Dark- und Light-Mode
-- Design-Tokens
-- Navigation
-- Interaktionen
-- technische Umsetzung
-
-Dadurch ist nachvollziehbar, welche Anforderungen der KI für die Erstellung der Website vorgegeben wurden.
-
-## Aktueller Stand
-
-- semantisches HTML5
-- eigenes Design-System mit Design-Tokens
-- Dark- und Light-Mode
-- Speicherung des gewählten Themes
-- Liquid-Glass-inspiriertes Design
-- Responsive Layout
-- Profilbereich mit Profilbild
-- feste Top-Navigation
-- wiederverwendbarer Header und Footer
-- dynamisches Laden gemeinsamer Komponenten
-- zusätzliche Seitennavigation auf größeren Displays
-- Skills und Technologien
-- Zertifikate und Nachweise
-- Projektübersicht
-- Prompt-Bereich
-- separate Vault-Seite
-- JavaScript-basierte Vault-Erreichbarkeitsprüfung
-- zugängliche Akkordeons
-- Tastaturnavigation
-- sichtbare Fokuszustände
-- grundlegende WCAG-orientierte Accessibility
-- GitHub Pages Deployment
-- eigene Domain
+Die erste Version entstand als eigenständiges Lernprojekt mit HTML und CSS. Für Version 2 habe ich Anforderungen, Inhalte und Designvorgaben definiert und das Portfolio mit KI-Unterstützung überarbeitet. Generierte Lösungen prüfe, verstehe und passe ich im weiteren Entwicklungsprozess an. Der zugehörige [Redesign-Prompt](assets/prompts/portfolio.md) ist im Repository dokumentiert.
 
 ## Technologien
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Git
-- GitHub
-- GitHub Pages
+| Bereich | Im Portfolio verwendet für |
+| --- | --- |
+| HTML5 | Seitenstruktur, Inhalte und semantische Elemente |
+| CSS3 | Responsives Layout, Design-Tokens, Dark-/Light-Mode und Animationen |
+| Vanilla JavaScript | Navigation, Theme-Umschaltung, Akkordeons, dynamische Komponenten und Vault-Statusabfrage |
+| Web App Manifest | App-Metadaten, Icons und eigenständiger Anzeigemodus beim Hinzufügen zum Startbildschirm |
+| Git und GitHub | Versionsverwaltung und öffentliche Projektdokumentation |
+| GitHub Pages und eigene Domain | Veröffentlichung unter `jd-schuldt.de` |
+
+**Abgrenzung:** Python, FastAPI, SQLite, Docker, Linux und restic werden im Portfolio als Lern- oder Projektthemen vorgestellt, sind aber **nicht** Teil des Technologie-Stacks dieser Website. Das Repository enthält eine statische Frontend-Website ohne eigenes Backend oder Build-System. Das vorhandene Web App Manifest allein bedeutet nicht, dass Offline-Nutzung über einen Service Worker implementiert ist.
+
+## Seiten und Funktionen
+
+### Startseite (`/`)
+
+- **Hero und Über mich:** Vorstellung, Profilbild, Lernweg und Links zu Projekten und GitHub.
+- **Skills & Technologien:** Übersicht der auf der Website dargestellten Kenntnisse und Erfahrungsstände.
+- **Zertifikate & Nachweise:** Kurs- und Badge-Nachweise als verlinkte PDFs, darunter Python-Grundlagen, Python-Programme, AI Prompting sowie HTML/CSS. Ausklappbare Bereiche gruppieren einzelne Kurs-Badges.
+- **Projekte:** Präsentation eigener Arbeiten und Verweise auf weiterführende Projektinformationen.
+- **Prompts:** Dokumentation der KI-gestützten Arbeit am Portfolio.
+
+### Gemeinsames Layout und Interaktionen
+
+- Header und Footer werden über `components.js` per `fetch()` aus `components/header.html` und `components/footer.html` in die Seiten geladen.
+- Responsive Top-Navigation mit ein- und ausklappbarem Menü auf kleineren Bildschirmen; zusätzliche Abschnittsnavigation auf größeren Bildschirmen.
+- Dark-/Light-Mode mit Speicherung der Auswahl in `localStorage`.
+- Akkordeons mit `aria-expanded` und zugeordneten Inhaltsbereichen, Skip-Link, sichtbare Tastatur-Fokuszustände und Berücksichtigung reduzierter Bewegung bei Scroll-Effekten.
+- Scroll-basierte Einblendeffekte, Hervorhebung des aktiven Abschnitts und Schaltfläche zum Zurückspringen an den Seitenanfang.
+
+Diese Angaben beschreiben die im Quellcode vorgesehenen Funktionen; sie ersetzen keinen vollständigen Browser- oder Accessibility-Test.
+
+### Vault-Seite (`/vault/`)
+
+Eine separate Infoseite für meinen privat betriebenen Vaultwarden-Dienst. `vault/vault.js` prüft die Erreichbarkeit über den `/healthz`-Endpunkt, zeigt Prüf-, Online- oder Offline-Status und ermöglicht bei erfolgreicher Prüfung die Weiterleitung zum Vault. **Der Passwortmanager ist kein Bestandteil dieses öffentlichen Repositories und bleibt über mein privates VPN zugänglich.** Eine fehlgeschlagene Browseranfrage kann neben fehlender VPN-Verbindung auch andere Ursachen haben.
+
+### Impressum-Vorlage (`/impressum/`)
+
+Die verlinkte Seite ist derzeit **nur eine ausdrücklich unvollständige Vorlage mit Platzhaltern**, kein fertig ausgefülltes Impressum. Vor der rechtlichen Nutzung müssen die erforderlichen Angaben geprüft und ergänzt werden.
 
 ## Projektstruktur
 
 ```text
 jd-portfolio/
 ├── assets/
-│   ├── certificates/
-│   ├── images/
-│   │   └── jd-profile.jpeg
+│   ├── certificates/       # Verlinkte Kurs- und Badge-PDFs
+│   ├── icons/              # Website- und App-Icons
+│   ├── images/             # Bildmaterial, darunter das Profilbild
 │   └── prompts/
-│       └── portfolio.md
-│
+│       └── portfolio.md    # Anforderungen und Prompt zum Redesign
 ├── components/
-│   ├── footer.html
-│   └── header.html
-│
+│   ├── header.html         # Gemeinsame Navigation
+│   └── footer.html         # Gemeinsamer Footer
+├── impressum/
+│   └── index.html          # Unvollständige Impressum-Vorlage
 ├── vault/
-│   ├── index.html
-│   ├── vault.css
-│   └── vault.js
-│
+│   ├── index.html          # Vault-Infoseite
+│   ├── vault.css           # Seitenspezifische Gestaltung
+│   └── vault.js            # Erreichbarkeitsprüfung
+├── index.html              # Portfolio-Startseite
+├── style.css               # Layout und Komponenten-Styling
+├── jd-design-tokens.css    # Farben, Abstände und Theme-Tokens
+├── script.js               # Frontend-Interaktionen
+├── components.js           # Dynamisches Laden von Header und Footer
+├── manifest.webmanifest    # Web-App-Metadaten und Icons
+├── CNAME                   # Eigene Domain
 ├── .gitignore
-├── CNAME
-├── components.js
-├── index.html
-├── jd-design-tokens.css
-├── style.css
-├── script.js
 └── README.md
 ```
 
-## Entwicklung
+Die Übersicht zeigt die zentralen Dateien und Ordner; einzelne Mediendateien und Zertifikate sind zugunsten der Lesbarkeit zusammengefasst.
 
-Das Projekt dient nicht nur als fertige Website, sondern auch als Dokumentation meines Lernfortschritts.
+## Lokal ausführen
 
-Version 1 entstand als klassisches Lernprojekt, bei dem ich die Website selbst aufgebaut habe.
+Es ist kein Paketmanager und kein Build-Schritt erforderlich. Für die Entwicklung wird ein **lokaler HTTP-Server** benötigt, da Header und Footer mit `fetch()` unter absoluten Pfaden (`/components/...`) geladen werden. Das direkte Öffnen von `index.html` über `file://` ist daher nicht ausreichend.
 
-Mit Version 2 beschäftige ich mich zusätzlich damit, wie KI sinnvoll in einen Entwicklungsprozess integriert werden kann – von der Formulierung technischer Anforderungen über Prompting bis zur Prüfung und Weiterentwicklung der erzeugten Ergebnisse.
+```bash
+git clone https://github.com/JayD-labs/jd-portfolio.git
+cd jd-portfolio
+python3 -m http.server 8000
+```
 
-Zusätzlich nutze ich das Projekt inzwischen, um wiederverwendbare Frontend-Strukturen, JavaScript-basierte Komponenten, mehrseitige Layouts und die Anbindung eigener Self-Hosting-Projekte praktisch umzusetzen.
+Anschließend `http://localhost:8000/` im Browser öffnen. Python dient hier **nur als lokaler Entwicklungsserver**, nicht als Laufzeittechnologie der Website. Die Vault-Statusprüfung benötigt zusätzlich den passenden privaten Netzwerkzugang und kann lokal oder ohne VPN erwartungsgemäß fehlschlagen.
 
-Git und GitHub nutze ich dabei zur Versionsverwaltung und zur nachvollziehbaren Dokumentation der Entwicklung.
+## Entwicklungsstand
 
-## Status
+Das Portfolio ist unter der eigenen Domain veröffentlicht und wird als Lern- und Präsentationsprojekt fortlaufend erweitert. Version 2 umfasst das responsive Redesign, eine mehrseitige Struktur mit gemeinsamen Layout-Komponenten, interaktive Frontend-Funktionen, den Zertifikatsbereich und die separate Vault-Infoseite. Die Impressum-Seite ist weiterhin eine unvollständige Vorlage.
 
-🚧 Das Portfolio befindet sich weiterhin in aktiver Entwicklung und wächst mit meinem Lernfortschritt.
-
-## Responsive Hero und Impressum-Vorlage
-
-- Das Hero-Layout wechselt erst ab 64rem auf zwei Spalten. Bei schmaleren Fenstern stehen Bild und Text untereinander; die Textspalte kann nicht mehr die Grid-Breite erzwingen.
-- Unter `/impressum/` liegt eine ausdrücklich als unvollständig markierte Blanko-Vorlage mit Platzhaltern. Der gemeinsame Footer verweist auf sie. **Vor einer rechtskonformen Nutzung müssen die tatsächlichen Anbieter- und Kontaktangaben geprüft und vom Betreiber freigegeben werden.** Die Vorlage ist kein fertiges Impressum.
-- Bestehende CSP-Direktiven, Skills, Projekte und Theme-Logik wurden nicht verändert.
+Die dokumentierten Lernstände und Projekte beziehen sich auf die Portfolio-Inhalte; aus ihrer Erwähnung folgt nicht, dass deren Software in dieser Website implementiert ist.
