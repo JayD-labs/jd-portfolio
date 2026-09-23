@@ -183,3 +183,9 @@ Git und GitHub nutze ich dabei zur Versionsverwaltung und zur nachvollziehbaren 
 ## Status
 
 🚧 Das Portfolio befindet sich weiterhin in aktiver Entwicklung und wächst mit meinem Lernfortschritt.
+
+## Responsive Hero und Impressum-Vorlage
+
+- Das Hero-Layout wechselt erst ab 64rem auf zwei Spalten. Bei schmaleren Fenstern stehen Bild und Text untereinander; die Textspalte kann nicht mehr die Grid-Breite erzwingen.
+- Unter `/impressum/` liegt eine ausdrücklich als unvollständig markierte Blanko-Vorlage mit Platzhaltern. Der gemeinsame Footer verweist auf sie. **Vor einer rechtskonformen Nutzung müssen die tatsächlichen Anbieter- und Kontaktangaben geprüft und vom Betreiber freigegeben werden.** Die Vorlage ist kein fertiges Impressum.
+- Bestehende CSP-Direktiven, Skills, Projekte und Theme-Logik wurden nicht verändert.
