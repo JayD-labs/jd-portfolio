@@ -1,12 +1,12 @@
 # JD Portfolio
 
-**Persönliches IT-Portfolio und praxisorientiertes Webentwicklungsprojekt von JD.**
+**Persönliches IT-Portfolio mit Fokus auf IT-Support, Python und Linux.**
 
 🌐 **Live-Demo:** [jd-schuldt.de](https://jd-schuldt.de) · **Quellcode:** [JayD-labs/jd-portfolio](https://github.com/JayD-labs/jd-portfolio)
 
 ## Projekt und Ziel
 
-Die Website dokumentiert meinen Weg in die IT: Grundlagen und praktische Erfahrungen, abgeschlossene Lernmodule, Zertifikatsnachweise sowie eigene Projekte. Gleichzeitig dient das Repository als nachvollziehbares Entwicklungsprojekt für HTML, CSS, JavaScript und Git/GitHub.
+Die Website dokumentiert meinen Weg in die IT mit Fokus auf IT-Support, Python und Linux: praktische Erfahrungen, Lernfortschritt, Zertifikatsnachweise sowie eigene Projekte. Das Portfolio selbst dient zusätzlich als nachvollziehbares Projekt für HTML, CSS, JavaScript und Git/GitHub.
 
 Die erste Version entstand als eigenständiges Lernprojekt mit HTML und CSS. Für Version 2 habe ich Anforderungen, Inhalte und Designvorgaben definiert und das Portfolio mit KI-Unterstützung überarbeitet. Generierte Lösungen prüfe, verstehe und passe ich im weiteren Entwicklungsprozess an. Der zugehörige [Redesign-Prompt](assets/prompts/portfolio.md) ist im Repository dokumentiert.
 
@@ -16,7 +16,7 @@ Die erste Version entstand als eigenständiges Lernprojekt mit HTML und CSS. Fü
 | --- | --- |
 | HTML5 | Seitenstruktur, Inhalte und semantische Elemente |
 | CSS3 | Responsives Layout, Design-Tokens, Dark-/Light-Mode und Animationen |
-| Vanilla JavaScript | Navigation, Theme-Umschaltung, Akkordeons, dynamische Komponenten und Vault-Statusabfrage |
+| Vanilla JavaScript | Navigation, Theme-Umschaltung, Akkordeons und dynamische Komponenten |
 | Web App Manifest | App-Metadaten, Icons und eigenständiger Anzeigemodus beim Hinzufügen zum Startbildschirm |
 | Git und GitHub | Versionsverwaltung und öffentliche Projektdokumentation |
 | GitHub Pages und eigene Domain | Veröffentlichung unter `jd-schuldt.de` |
