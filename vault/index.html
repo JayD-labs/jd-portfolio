@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://vault.jd-schuldt.de; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
 
     <title>JD Vault</title>
 
@@ -13,44 +14,23 @@
     
     <script src="/components.js" defer></script>
     <script src="/script.js" defer></script>
-    <script src="vault.js" defer></script>
 </head>
 
 <body>
     <div id="site-header"></div>
     <main class="page-shell vault-shell">
         <section class="glass-panel">
-            <p class="eyebrow">JD Private Services</p>
-
-            <h1>JD Vault</h1>
-
+            <p class="eyebrow">Private Infrastruktur</p>
+            <h1>Privater Dienst</h1>
             <p>
-                Mein privater Passwort-Manager ist ausschließlich
-                über mein VPN erreichbar.
+                Dieser Bereich gehört zu meiner privaten Infrastruktur.
+                Endpunkte, Verbindungsdetails und Statusprüfungen werden bewusst
+                nicht öffentlich bereitgestellt.
             </p>
-
-            <div class="vault-status" id="vault-status">
-                <div class="status-heading">
-                    <span class="status-dot" aria-hidden="true"></span>
-                    <p class="status-label">Verbindungsstatus</p>
-                </div>
-
-                <strong id="vault-status-title">
-                    Vault nicht erreichbar
-                </strong>
-
-                <p class="muted" id="vault-status-message">
-                    Stelle sicher, dass du mit meinem privaten VPN verbunden bist.
-                </p>
-
-                <button
-                    class="button button-secondary"
-                    id="vault-retry"
-                    type="button"
-                >
-                    Verbindung erneut prüfen
-                </button>
-            </div>        
+            <p class="muted">
+                Im Portfolio dokumentiere ich stattdessen nur die verwendeten
+                Technologien und die dabei gewonnenen Erfahrungen.
+            </p>
         </section>
     </main>
 
