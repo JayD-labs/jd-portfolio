@@ -43,9 +43,9 @@ Die erste Version entstand als eigenständiges Lernprojekt mit HTML und CSS. Fü
 
 Diese Angaben beschreiben die im Quellcode vorgesehenen Funktionen; sie ersetzen keinen vollständigen Browser- oder Accessibility-Test.
 
-### Private Infrastruktur
+### Vault-Seite (`/vault/`)
 
-Private Dienste werden im öffentlichen Portfolio nicht direkt verlinkt oder per Browser-Healthcheck abgefragt. Das Portfolio beschreibt lediglich die eingesetzten Technologien und Lernerfahrungen; interne Endpunkte und Verbindungsdetails bleiben bewusst außerhalb der öffentlichen Präsentation.
+Eine separate Infoseite für meinen privat betriebenen Vaultwarden-Dienst. `vault/vault.js` prüft die Erreichbarkeit über den `/healthz`-Endpunkt, zeigt Prüf-, Online- oder Offline-Status und ermöglicht bei erfolgreicher Prüfung die Weiterleitung zum Vault. **Der Passwortmanager ist kein Bestandteil dieses öffentlichen Repositories und bleibt über mein privates VPN zugänglich.** Eine fehlgeschlagene Browseranfrage kann neben fehlender VPN-Verbindung auch andere Ursachen haben.
 
 ### Impressum-Vorlage (`/impressum/`)
 
@@ -67,9 +67,9 @@ jd-portfolio/
 ├── impressum/
 │   └── index.html          # Unvollständige Impressum-Vorlage
 ├── vault/
-│   ├── index.html          # Generische Infoseite für private Infrastruktur
+│   ├── index.html          # Vault-Infoseite
 │   ├── vault.css           # Seitenspezifische Gestaltung
-│   └── vault.js            # Keine öffentlichen Endpunkte oder Healthchecks
+│   └── vault.js            # Erreichbarkeitsprüfung
 ├── index.html              # Portfolio-Startseite
 ├── style.css               # Layout und Komponenten-Styling
 ├── jd-design-tokens.css    # Farben, Abstände und Theme-Tokens
@@ -93,10 +93,10 @@ cd jd-portfolio
 python3 -m http.server 8000
 ```
 
-Anschließend `http://localhost:8000/` im Browser öffnen. Python dient hier **nur als lokaler Entwicklungsserver**, nicht als Laufzeittechnologie der Website.
+Anschließend `http://localhost:8000/` im Browser öffnen. Python dient hier **nur als lokaler Entwicklungsserver**, nicht als Laufzeittechnologie der Website. Die Vault-Statusprüfung benötigt zusätzlich den passenden privaten Netzwerkzugang und kann lokal oder ohne VPN erwartungsgemäß fehlschlagen.
 
 ## Entwicklungsstand
 
-Das Portfolio ist unter der eigenen Domain veröffentlicht und wird als Lern- und Präsentationsprojekt fortlaufend erweitert. Version 2 umfasst das responsive Redesign, eine mehrseitige Struktur mit gemeinsamen Layout-Komponenten, interaktive Frontend-Funktionen und den Zertifikatsbereich. Die Impressum-Seite ist weiterhin eine unvollständige Vorlage.
+Das Portfolio ist unter der eigenen Domain veröffentlicht und wird als Lern- und Präsentationsprojekt fortlaufend erweitert. Version 2 umfasst das responsive Redesign, eine mehrseitige Struktur mit gemeinsamen Layout-Komponenten, interaktive Frontend-Funktionen, den Zertifikatsbereich und die separate Vault-Infoseite. Die Impressum-Seite ist weiterhin eine unvollständige Vorlage.
 
 Die dokumentierten Lernstände und Projekte beziehen sich auf die Portfolio-Inhalte; aus ihrer Erwähnung folgt nicht, dass deren Software in dieser Website implementiert ist.
