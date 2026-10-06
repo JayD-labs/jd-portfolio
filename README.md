@@ -1,12 +1,12 @@
 # JD Portfolio
 
-**Persönliches IT-Portfolio und praxisorientiertes Webentwicklungsprojekt von JD.**
+**Persönliches IT-Portfolio mit Fokus auf IT-Support, Python und Linux.**
 
 🌐 **Live-Demo:** [jd-schuldt.de](https://jd-schuldt.de) · **Quellcode:** [JayD-labs/jd-portfolio](https://github.com/JayD-labs/jd-portfolio)
 
 ## Projekt und Ziel
 
-Die Website dokumentiert meinen Weg in die IT: Grundlagen und praktische Erfahrungen, abgeschlossene Lernmodule, Zertifikatsnachweise sowie eigene Projekte. Gleichzeitig dient das Repository als nachvollziehbares Entwicklungsprojekt für HTML, CSS, JavaScript und Git/GitHub.
+Die Website dokumentiert meinen Weg in die IT mit Fokus auf IT-Support, Python und Linux: praktische Erfahrungen, Lernfortschritt, Zertifikatsnachweise sowie eigene Projekte. Das Portfolio selbst dient zusätzlich als nachvollziehbares Projekt für HTML, CSS, JavaScript und Git/GitHub.
 
 Die erste Version entstand als eigenständiges Lernprojekt mit HTML und CSS. Für Version 2 habe ich Anforderungen, Inhalte und Designvorgaben definiert und das Portfolio mit KI-Unterstützung überarbeitet. Generierte Lösungen prüfe, verstehe und passe ich im weiteren Entwicklungsprozess an. Der zugehörige [Redesign-Prompt](assets/prompts/portfolio.md) ist im Repository dokumentiert.
 
@@ -16,7 +16,7 @@ Die erste Version entstand als eigenständiges Lernprojekt mit HTML und CSS. Fü
 | --- | --- |
 | HTML5 | Seitenstruktur, Inhalte und semantische Elemente |
 | CSS3 | Responsives Layout, Design-Tokens, Dark-/Light-Mode und Animationen |
-| Vanilla JavaScript | Navigation, Theme-Umschaltung, Akkordeons, dynamische Komponenten und Vault-Statusabfrage |
+| Vanilla JavaScript | Navigation, Theme-Umschaltung, Akkordeons und dynamische Komponenten |
 | Web App Manifest | App-Metadaten, Icons und eigenständiger Anzeigemodus beim Hinzufügen zum Startbildschirm |
 | Git und GitHub | Versionsverwaltung und öffentliche Projektdokumentation |
 | GitHub Pages und eigene Domain | Veröffentlichung unter `jd-schuldt.de` |
@@ -43,9 +43,9 @@ Die erste Version entstand als eigenständiges Lernprojekt mit HTML und CSS. Fü
 
 Diese Angaben beschreiben die im Quellcode vorgesehenen Funktionen; sie ersetzen keinen vollständigen Browser- oder Accessibility-Test.
 
-### Vault-Seite (`/vault/`)
+### Private Infrastruktur
 
-Eine separate Infoseite für meinen privat betriebenen Vaultwarden-Dienst. `vault/vault.js` prüft die Erreichbarkeit über den `/healthz`-Endpunkt, zeigt Prüf-, Online- oder Offline-Status und ermöglicht bei erfolgreicher Prüfung die Weiterleitung zum Vault. **Der Passwortmanager ist kein Bestandteil dieses öffentlichen Repositories und bleibt über mein privates VPN zugänglich.** Eine fehlgeschlagene Browseranfrage kann neben fehlender VPN-Verbindung auch andere Ursachen haben.
+Private Dienste werden im öffentlichen Portfolio nicht direkt verlinkt oder per Browser-Healthcheck abgefragt. Das Portfolio beschreibt lediglich die eingesetzten Technologien und Lernerfahrungen; interne Endpunkte und Verbindungsdetails bleiben bewusst außerhalb der öffentlichen Präsentation.
 
 ### Impressum-Vorlage (`/impressum/`)
 
@@ -67,9 +67,9 @@ jd-portfolio/
 ├── impressum/
 │   └── index.html          # Unvollständige Impressum-Vorlage
 ├── vault/
-│   ├── index.html          # Vault-Infoseite
+│   ├── index.html          # Generische Infoseite für private Infrastruktur
 │   ├── vault.css           # Seitenspezifische Gestaltung
-│   └── vault.js            # Erreichbarkeitsprüfung
+│   └── vault.js            # Keine öffentlichen Endpunkte oder Healthchecks
 ├── index.html              # Portfolio-Startseite
 ├── style.css               # Layout und Komponenten-Styling
 ├── jd-design-tokens.css    # Farben, Abstände und Theme-Tokens
@@ -93,10 +93,10 @@ cd jd-portfolio
 python3 -m http.server 8000
 ```
 
-Anschließend `http://localhost:8000/` im Browser öffnen. Python dient hier **nur als lokaler Entwicklungsserver**, nicht als Laufzeittechnologie der Website. Die Vault-Statusprüfung benötigt zusätzlich den passenden privaten Netzwerkzugang und kann lokal oder ohne VPN erwartungsgemäß fehlschlagen.
+Anschließend `http://localhost:8000/` im Browser öffnen. Python dient hier **nur als lokaler Entwicklungsserver**, nicht als Laufzeittechnologie der Website.
 
 ## Entwicklungsstand
 
-Das Portfolio ist unter der eigenen Domain veröffentlicht und wird als Lern- und Präsentationsprojekt fortlaufend erweitert. Version 2 umfasst das responsive Redesign, eine mehrseitige Struktur mit gemeinsamen Layout-Komponenten, interaktive Frontend-Funktionen, den Zertifikatsbereich und die separate Vault-Infoseite. Die Impressum-Seite ist weiterhin eine unvollständige Vorlage.
+Das Portfolio ist unter der eigenen Domain veröffentlicht und wird als Lern- und Präsentationsprojekt fortlaufend erweitert. Version 2 umfasst das responsive Redesign, eine mehrseitige Struktur mit gemeinsamen Layout-Komponenten, interaktive Frontend-Funktionen und den Zertifikatsbereich. Die Impressum-Seite ist weiterhin eine unvollständige Vorlage.
 
 Die dokumentierten Lernstände und Projekte beziehen sich auf die Portfolio-Inhalte; aus ihrer Erwähnung folgt nicht, dass deren Software in dieser Website implementiert ist.
